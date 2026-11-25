@@ -16,14 +16,19 @@ EXAMPLE: str = "example"
 # GREEK_REF cites the lexicons that list the Greek lemma of a loanword.
 GREEK_REF: str = "greek-ref"
 LANG: str = "lang"
+# NOTE is a note of a sense, or of its translation. It's prefixed, because
+# `note` is the class of the body of a Crum page.
+NOTE: str = "kellia-note"
 ORTHS: str = "orths"
 # REF lists the Greek equivalents of an Egyptian sense.
 REF: str = "ref"
-REF_XR: str = "ref_xr"
 # REMARK is a remark on a word form, such as how rare it is.
 REMARK: str = "remark"
 # SENSES is prefixed, because Crum uses `senses` for something else.
 SENSES: str = "kellia-senses"
+# SUPPLEMENT holds the lines that follow the explanation and the bibliography of
+# a sense: its examples, Greek equivalents, cross-references, and notes.
+SUPPLEMENT: str = "supplement"
 XR: str = "xr"
 # XR_TARGET is the word that a cross-reference refers to. The frontend links
 # it to Coptic Dictionary Online.

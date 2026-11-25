@@ -67,14 +67,33 @@ COMPREHENSIVE: pathlib.Path = (
 NUM_GREEK: int = 3208
 NUM_EGYPTIAN: int = 8055
 
-_SenseChild = typing.Literal["quote", "definition", "bibl", "ref", "xr"]
-_SENSE_CHILDREN: list[_SenseChild] = [
+# A `translation_note` has a language, like the quotes and definitions. A
+# `sense_note` is a note of the sense itself, which has none.
+_SenseChild = typing.Literal[
     "quote",
     "definition",
+    "translation_note",
     "bibl",
+    "example",
     "ref",
     "xr",
+    "sense_note",
 ]
+_SENSE_CHILDREN: list[_SenseChild] = list(typing.get_args(_SenseChild))
+# _EXPLANATION lists the rows that explain a sense in a given language.
+_EXPLANATION: tuple[_SenseChild, ...] = (
+    "quote",
+    "definition",
+    "translation_note",
+)
+# _SUPPLEMENT lists the rows that follow the explanation and the bibliography
+# of a sense, each on a line of its own.
+_SUPPLEMENT: tuple[_SenseChild, ...] = ("example", "ref", "xr", "sense_note")
+# _SHARED lists the rows that no language owns, so all languages share them.
+_SHARED: tuple[_SenseChild, ...] = ("bibl", *_SUPPLEMENT)
+assert sorted(_EXPLANATION + _SHARED) == sorted(_SENSE_CHILDREN)
+# _DDGLC_ROWS lists the only rows that a DDGLC sense has.
+_DDGLC_ROWS: tuple[_SenseChild, ...] = ("quote", "bibl")
 # A sense row is a tuple of (name, value, label). The label is an optional
 # HTML prefix, such as a language label, rendered before the value.
 _Row = tuple[_SenseChild, str, str]
@@ -83,8 +102,11 @@ _Row = tuple[_SenseChild, str, str]
 _ROW_CLASS: dict[_SenseChild, str] = {
     "quote": dict_cls.GLOSS,
     "definition": cls.DEFINITION,
+    "translation_note": cls.NOTE,
+    "example": cls.EXAMPLE,
     "ref": cls.REF,
     "xr": cls.XR,
+    "sense_note": cls.NOTE,
 }
 # _CITATION_DELIMITER separates the citations of a sense. The source delimits
 # them with a semicolon, and so does the Xooxle index, which displays them on a
@@ -362,6 +384,10 @@ class Sense:
         if name == "bibl":
             assert not label
             return f'<span class="{cls.CITATION}">{value}</span>'
+        if name != "xr":
+            # The other rows hold plain text, so we mark their Greek words
+            # here. A cross-reference holds the HTML that `_xr` renders.
+            value = _greek(value)
         return f'{label}<span class="{_ROW_CLASS[name]}">{value}</span>'
 
     def tbody(self) -> str:
@@ -377,11 +403,11 @@ class Sense:
         yield _CITATION_DELIMITER.join(map(self.format, self.subset("bibl")))
         yield "</td>"
         yield "</tr>"
-        ref_xr = self.subset("ref", "xr")
-        if ref_xr:
+        supplement = self.subset(*_SUPPLEMENT)
+        if supplement:
             yield "<tr>"
-            yield f'<td class="{cls.REF_XR}" colspan="2">'
-            yield page.LINE_BREAK.join(map(self.format, ref_xr))
+            yield f'<td class="{cls.SUPPLEMENT}" colspan="2">'
+            yield page.LINE_BREAK.join(map(self.format, supplement))
             yield "</td>"
             yield "</tr>"
         yield "</tbody>"
@@ -390,20 +416,21 @@ class Sense:
         """Render the explanation of the sense, one line per language.
 
         The explanation in a language starts with a row that bears the label of
-        the language (see `explain`). Its definitions follow its quotes on the
-        same line, in parentheses, like a note that follows a gloss.
+        the language (see `explain`). Its definitions and notes follow its
+        quotes on the same line, in parentheses, like a note that follows a
+        gloss.
 
         Returns:
             The HTML of the explanation.
         """
         lines: list[list[str]] = []
-        for row in self.subset("quote", "definition"):
+        for row in self.subset(*_EXPLANATION):
             name, _, label = row
             if label or not lines:
                 lines.append([])
             line: list[str] = lines[-1]
             html: str = self.format(row)
-            line.append(f"({html})" if line and name == "definition" else html)
+            line.append(f"({html})" if line and name != "quote" else html)
         return page.LINE_BREAK.join(" ".join(line) for line in lines)
 
     def subset(self, *names: _SenseChild) -> list[_Row]:
@@ -423,7 +450,7 @@ class Sense:
         return value
 
     def explain(self, label: str = "") -> list[_Row]:
-        explanation = self.subset("quote", "definition")
+        explanation = self.subset(*_EXPLANATION)
         if not explanation:
             return explanation
         if label:
@@ -431,8 +458,8 @@ class Sense:
             explanation[0] = (name, value, label)
         return explanation
 
-    def give_references(self) -> list[_Row]:
-        return self.subset("bibl", "ref", "xr")
+    def give_shared(self) -> list[_Row]:
+        return self.subset(*_SHARED)
 
 
 class Lang:
@@ -494,9 +521,11 @@ def _tree_aux(
         labels: list[str] = node.labels
         parts: list[str] = []
         if top:
-            parts.append(f'<span class="{dict_cls.GLOSS}">{labels[0]}</span>')
+            parts.append(
+                f'<span class="{dict_cls.GLOSS}">{_greek(labels[0])}</span>',
+            )
             labels = labels[1:]
-        parts.extend(f"({label})" for label in labels)
+        parts.extend(f"({_greek(label)})" for label in labels)
         yield "<li>"
         yield " ".join(parts)
         if node.children:
@@ -541,6 +570,26 @@ def _xr(typ: str, ref: tei.XrRef) -> str:
     # the HTML and the Xooxle index smaller.
     word: str = ref.target.removeprefix("#")
     return f'{typ}. <span class="{cls.XR_TARGET}">{word}</span> {ref.text}'
+
+
+def _example(cit: tei.Cit) -> str:
+    """Render an example of a sense.
+
+    An example usually has a single quote, holding a Coptic phrase followed by
+    its quoted translation (`ⲉⲙⲁϣⲟ "überaus, sehr"`). A few hold the phrase and
+    the translation in separate quotes, or hold several phrases.
+
+    Args:
+        cit: The example.
+
+    Returns:
+        The text of the example.
+    """
+    text: str = ", ".join(cit.phrases)
+    # Quote the translations, like the other examples do.
+    text += "".join(f' "{t}"' for t in cit.translations)
+    text += "".join(f" ({n.text})" for n in cit.notes)
+    return text
 
 
 def _form_sort_key(form: tei.Form) -> tuple[str, str]:
@@ -602,7 +651,7 @@ class Word:
                 merged.add(*row)
             for row in f.explain(f'<span class="{cls.LANG}">(Fr.)</span> '):
                 merged.add(*row)
-            for row in d.give_references():
+            for row in d.give_shared():
                 merged.add(*row)
         return merged
 
@@ -624,7 +673,10 @@ class Word:
         de, en, fr = self.langs["de"], self.langs["en"], self.langs["fr"]
         assert not any(s.explain() for s in [*de.senses, *fr.senses])
         senses: list[Sense] = en.senses
-        assert not any(s.subset("definition", "ref", "xr") for s in senses)
+        assert all(
+            s.subset(*_DDGLC_ROWS) == s.subset(*_SENSE_CHILDREN)
+            for s in senses
+        )
         assert all(s.single("bibl") == "DDGLC" for s in senses)
         yield f'<ul class="{cls.SENSES}">'
         yield from _tree_aux(
@@ -716,19 +768,27 @@ def _process_entry(entry: tei.Entry) -> Word:
                     pass
                 case tei.SenseRef():
                     for lang in langs.values():
-                        lang.add("ref", _greek(child.text))
+                        lang.add("ref", child.text)
                 case tei.Xr():
                     for ref in child.refs:
                         for lang in langs.values():
                             lang.add("xr", _xr(child.type, ref))
                 case tei.Note():
-                    # TODO: (#51) Render the notes of senses.
-                    pass
+                    # The note of a sense has no language. It's mostly German,
+                    # and qualifies the sense (such as `meist Plural`).
+                    # TODO: (#0) Explain the citations in notes, like those in
+                    # the bibliography and the etymology. Two sense notes cite
+                    # a work (`CD 45b vgl. βοίδιον (?)`, under `ⲃⲟⲉⲓⲧ`), and
+                    # so does one translation note (`Černý CED 3`, under
+                    # `ⲁⲕⲟⲩⲗⲁⲩϫⲉ`). The frontend would need to search the `NOTE`
+                    # class, and `tei.py` would need to validate the citations.
+                    for lang in langs.values():
+                        lang.add("sense_note", child.text)
                 case tei.Cit() if child.type == "example":
-                    # TODO: (#51) Incorporate examples. They are few, and
-                    # mostly compounds or set phrases, without a translation
+                    # Examples are few, and mostly compounds or set phrases
                     # (such as `ⲁⲗⲙⲡⲉ`, hailstone, under `ⲁⲗ`, pebble).
-                    pass
+                    for lang in langs.values():
+                        lang.add("example", _example(child), "e.g. ")
                 case tei.Cit():
                     for lang in langs.values():
                         for citation in child.source.citations:
@@ -740,7 +800,11 @@ def _process_entry(entry: tei.Entry) -> Word:
                             "definition",
                             definition.text,
                         )
-                    # TODO: (#51) Handle the notes of <cit>.
+                    # The notes of a translation qualify it, in its own
+                    # language (such as `with dat. of person`).
+                    for note in child.notes:
+                        assert note.lang is not None
+                        langs[note.lang].add("translation_note", note.text)
                 case _:
                     typing.assert_never(child)
 
@@ -1082,10 +1146,11 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
             # To keep words from fusing, the tree separates its nodes with
             # spaces (see `_tree_aux`).
             retain_tags=xooxle.RETAIN_TAGS_DEFAULT | {"ul", "li"},
-            # A sense ends with its bibliography, followed by its references
-            # and cross-references, each on a line of its own. They retain
-            # their classes, which style them, and let the frontend explain
-            # the cited works.
+            # A sense ends with its bibliography, followed by its examples,
+            # references, cross-references, and notes, each on a line of its
+            # own. The bibliography, references, and cross-references retain
+            # their classes, which style them, and let the frontend explain the
+            # cited works.
             block_classes={cls.BIBL},
             # Each sense of an Egyptian word is a unit, so the frontend
             # separates the senses with rules. A Greek tree has no row groups,

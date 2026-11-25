@@ -284,6 +284,8 @@ _COPTIC_MARKS: str = "".join(
         "⳽",  # COPTIC FRACTION ONE HALF
     ],
 )
+# _COPTIC_LETTER matches a Coptic letter.
+_COPTIC_LETTER: re.Pattern[str] = re.compile(f"[{_COPTIC_LETTERS}]")
 # _COPTIC_TEXT is Coptic text, with at least one letter.
 _COPTIC_TEXT: str = (
     f"(?=.*[{_COPTIC_LETTERS}])[{_COPTIC_LETTERS}{_COPTIC_MARKS}]+"
@@ -816,12 +818,39 @@ class ORef(Element[typing.Never]):
     text: typing.Annotated[str, Text(_COPTIC_TEXT)]
 
 
+def _balanced(text: str) -> bool:
+    """Check that the parentheses in a text are balanced.
+
+    Args:
+        text: The text.
+
+    Returns:
+        Whether every parenthesis is closed, and only after it's opened.
+    """
+    depth: int = 0
+    for char in text:
+        depth += {"(": 1, ")": -1}.get(char, 0)
+        if depth < 0:
+            return False
+    return depth == 0
+
+
 class Note(Element[typing.Never]):
     """Note is a free-text note, found in many contexts."""
 
     TAG = "note"
     lang: typing.Annotated[Language | None, Attr("xml:lang")]
     text: typing.Annotated[str, Text()]
+
+    @typing.override
+    def _validate(self) -> None:
+        # Notes are rendered as is, so an unbalanced parenthesis (such as one
+        # left by truncated text) would show.
+        self._ensure(
+            _balanced(self.text),
+            "has unbalanced parentheses",
+            repr(self.text),
+        )
 
 
 class Pos(Element[typing.Never]):
@@ -938,6 +967,15 @@ class Quote(Element[typing.Never]):
     lang: typing.Annotated[Language | None, Attr("xml:lang")]
     text: typing.Annotated[str, Text()]
 
+    @property
+    def phrase(self) -> bool:
+        """Whether this is a Coptic phrase, rather than its translation.
+
+        A phrase starts with a Coptic letter, while a translation may only
+        mention Coptic words (such as `vgl. ⲁⲗ`).
+        """
+        return bool(_COPTIC_LETTER.match(self.text))
+
 
 class Def(Element[typing.Never]):
     """Def is a definition."""
@@ -997,6 +1035,26 @@ class Cit(Element[Quote | Def | Bibl | Note]):
         assert self.type == "translation"
         return {q.lang: q.text for q in self.quotes if q.lang is not None}
 
+    @property
+    def phrases(self) -> list[str]:
+        """Return the Coptic phrases of an example.
+
+        Returns:
+            The text of each phrase.
+        """
+        assert self.type == "example"
+        return [q.text for q in self.quotes if q.phrase]
+
+    @property
+    def translations(self) -> list[str]:
+        """Return the translations of an example, which follow its phrases.
+
+        Returns:
+            The text of each translation.
+        """
+        assert self.type == "example"
+        return [q.text for q in self.quotes if not q.phrase]
+
     @typing.override
     def _validate(self) -> None:
         translation: bool = self.type == "translation"
@@ -1021,9 +1079,37 @@ class Cit(Element[Quote | Def | Bibl | Note]):
             "has repeated definition languages",
         )
         self._ensure(
+            all((n.lang is not None) == translation for n in self.notes),
+            "must have note languages if, and only if, it's a translation",
+        )
+        self._ensure(
             _distinct(n.lang for n in self.notes if n.lang is not None),
             "has repeated note languages",
         )
+        if translation:
+            # A note qualifies the quote or the definition in its language.
+            explained: set[Language] = {
+                q.lang for q in self.quotes if q.lang is not None
+            }
+            explained.update(d.lang for d in self.definitions)
+            self._ensure(
+                all(n.lang in explained for n in self.notes),
+                "has a note in a language without a quote or definition",
+            )
+        else:
+            self._ensure(
+                not self.definitions,
+                "is an example with definitions",
+            )
+            # The quotes of an example are Coptic phrases, followed by their
+            # translations, if any.
+            phrase: list[bool] = [q.phrase for q in self.quotes]
+            self._ensure(
+                phrase
+                and phrase[0]
+                and phrase == sorted(phrase, reverse=True),
+                "is an example whose phrases don't precede its translations",
+            )
 
 
 class SenseRef(Element[typing.Never]):
@@ -1325,6 +1411,15 @@ class Entry(Element[Form | GramGrp | Etym | Xr | Sense | Note]):
             self.ddglc
             == (self.etym is not None and self.etym.greek_lemma is not None),
             "must have a Greek lemma if, and only if, it's a DDGLC entry",
+        )
+        # The notes of DDGLC senses only explain why their entries are
+        # deprecated (such as `Sole sense of the entry is based on
+        # reconstructed or uncertain attestations`).
+        self._ensure(
+            not self.ddglc
+            or self.deprecated
+            or all(s.note is None for s in self.senses),
+            "is a DDGLC entry that has a sense note, but isn't deprecated",
         )
         # The note is rendered along with the etymology (see
         # `kellia.Etymology`), whose citations the frontend explains.

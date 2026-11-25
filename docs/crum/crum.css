@@ -639,14 +639,6 @@ body:not(.lexicon) :is(.complements, .morphologiques) p {
   width: 50%;
 }
 
-/* stylelint-disable selector-class-pattern */
-
-.sister-meaning .bibl,
-.sister-meaning .ref_xr {
-  display: none;
-}
-
-/* stylelint-enable selector-class-pattern */
 .senses {
   color: var(--text-muted);
 }
