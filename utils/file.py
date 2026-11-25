@@ -117,10 +117,10 @@ def loads[T](path: str | pathlib.Path, schema: type[T]) -> T:
     )
 
 
-def json_dumps(j: object, **kwargs: typing.Any) -> str:
+def json_dumps(j: object, indent: int = 1, **kwargs: typing.Any) -> str:
     return json.dumps(
         j,
-        indent=1,
+        indent=indent,
         ensure_ascii=False,
         allow_nan=False,
         **kwargs,

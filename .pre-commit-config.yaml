@@ -171,7 +171,6 @@ repos:
       - id: rst-backticks
       - id: rst-directive-colons
       - id: rst-inline-touching-normal
-      - id: text-unicode-replacement-char
 
   - repo: https://github.com/asottile/pyupgrade
     rev: v3.21.2
