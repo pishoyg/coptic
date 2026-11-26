@@ -27,7 +27,7 @@ reads; only `Crum.read_roots(live=True)` (used by the helpers that write
 to the sheet) reads the sheet directly. To test a local fix before the sheet has
 it, pass `--notsv`.
 
-KELLIA's `main.py` follows the same convention (`--tsv`, `--notsv`) for
-`dictionary/kellia_uni_goettingen_de/data/input/bohairic_supplemental.tsv`,
-a third-party Coptic Scriptorium sheet; fixes there go upstream (#305). The
-Crum pipeline reads that snapshot (via Greek sisters) but doesn't refresh it.
+KELLIA no longer snapshots a sheet. Its supplemental forms come from the
+CDO entry snapshot in `dictionary/kellia_uni_goettingen_de/data/raw/cdo/`,
+which only `make cdo` (`main.py --cdo`) refreshes; `make kellia` reads it as
+is. Fixes to supplemental forms go upstream (#305).
