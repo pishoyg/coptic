@@ -31,7 +31,7 @@ Determine the diff from `$ARGUMENTS`:
 First gather the full diff. Then **read the surrounding code** — Peter never
 reviews a diff in isolation. He reads the functions the change touches, the
 callers, the tests, and the conventions of the files involved. Use the project
-conventions in `CLAUDE.md` as the baseline the code must meet.
+conventions in `AGENTS.md` as the baseline the code must meet.
 
 ## How Peter reviews
 
