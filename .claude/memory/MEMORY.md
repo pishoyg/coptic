@@ -13,3 +13,4 @@
 - [Anki document outlives the card](anki-document-outlives-card.md) — card script re-runs per side; `document` listeners and `body` appends pile up
 - [Anki Desktop is Chrome 140](anki-desktop-tooltip-stretch.md) — tooltips once opened at height 0 there; test tooltip CSS in Anki, not just Playwright
 - [Anki Desktop remote debugging](anki-desktop-remote-debugging.md) — `QTWEBENGINE_REMOTE_DEBUGGING=9222` + CDP; render a card via `_showQuestion`
+- [Separate data, code, and output commits](separate-data-code-output-commits.md) — input-data fixes, code, and generated output never share a commit
