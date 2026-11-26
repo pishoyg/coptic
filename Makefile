@@ -234,26 +234,23 @@ anki_publish: REQUIRE_DRIVE_DIR FORCE
 
 ########## MORPHOLOGY ##########
 # TODO: (#44) Restore the rules (with appropriate paths) once the pipeline is
-# designed.
-ifeq ("true", "false")
-kindle: FORCE
-	./archive/kindlegen/kindlegen \
-	-gen_ff_mobi7 \
-	-dont_append_source \
-	-c0 \
-	"dictionary/marcion_sourceforge_net/data/output/mobi/dialect-B/dialect-B.opf"
-
-mobi_publish: REQUIRE_DRIVE_DIR FORCE
-	# Publish the Mobi Kindle dictionary to Drive.
-	cp \
-	"dictionary/marcion_sourceforge_net/data/output/mobi/dialect-B/dialect-B.mobi" \
-	"$${DRIVE_DIR}"
-else
+# designed:
+# kindle: FORCE
+# 	./archive/kindlegen/kindlegen \
+# 	-gen_ff_mobi7 \
+# 	-dont_append_source \
+# 	-c0 \
+# 	"dictionary/marcion_sourceforge_net/data/output/mobi/dialect-B/dialect-B.opf"
+#
+# mobi_publish: REQUIRE_DRIVE_DIR FORCE
+# 	# Publish the Mobi Kindle dictionary to Drive.
+# 	cp \
+# 	"dictionary/marcion_sourceforge_net/data/output/mobi/dialect-B/dialect-B.mobi" \
+# 	"$${DRIVE_DIR}"
 kindle: FORCE
 	echo -e "$${YELLOW}Work in progress!$${RESET}"
 mobi_publish: FORCE
 	echo -e "$${YELLOW}Work in progress!$${RESET}"
-endif
 
 ########## FONTS ##########
 # NOTE: The rule is phony because the `woff2` clone occupies a directory that
