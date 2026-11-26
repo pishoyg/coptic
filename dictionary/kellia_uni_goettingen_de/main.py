@@ -3,40 +3,37 @@
 
 import argparse
 
-from dictionary.kellia_uni_goettingen_de import kellia
+from dictionary.kellia_uni_goettingen_de import cdo, kellia
 
 _argparser = argparse.ArgumentParser("Process KELLIA's dictionary.")
 
-# Unlike in the Crum pipeline, no other flag short-circuits the run, so
-# `argparse` can reject the combination of these two by itself.
-_tsv_flags = _argparser.add_mutually_exclusive_group()
-
-_ = _tsv_flags.add_argument(
-    "--tsv",
+_ = _argparser.add_argument(
+    "--cdo",
     action="store_true",
     default=False,
-    help="Refresh the Bohairic supplemental TSV snapshot and exit.",
+    help="Refresh the snapshot of the Coptic Dictionary Online's entries, and"
+    " exit.",
 )
 
-_ = _tsv_flags.add_argument(
-    "--notsv",
-    action="store_true",
-    default=False,
-    help="Skip refreshing the Bohairic supplemental TSV snapshot; read the"
-    " tracked copy as is.",
+_DEFAULT_JOBS: int = 16
+
+_ = _argparser.add_argument(
+    "--jobs",
+    type=int,
+    default=None,
+    help="The number of parallel downloads, with `--cdo`. Defaults to"
+    f" {_DEFAULT_JOBS}.",
 )
 
 
 def main():
     args = _argparser.parse_args()
 
-    if not args.notsv:
-        # Refresh the snapshot before anything can read it. The parsed records
-        # are cached on their first read, so a stale read can not be corrected
-        # later in the run.
-        kellia.snapshot()
+    if args.jobs is not None and not args.cdo:
+        _argparser.error("--jobs requires --cdo")
 
-    if args.tsv:
+    if args.cdo:
+        cdo.download(_DEFAULT_JOBS if args.jobs is None else args.jobs)
         return
 
     kellia.XOOXLE.build()

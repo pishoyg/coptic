@@ -187,7 +187,7 @@ kellia: FORCE
 
 cdo: FORCE
 	# Download the entries of the Coptic Dictionary Online.
-	./dictionary/kellia_uni_goettingen_de/cdo.py
+	./dictionary/kellia_uni_goettingen_de/main.py --cdo
 
 ########## DAWOUD ##########
 dawoud_sentinels: FORCE

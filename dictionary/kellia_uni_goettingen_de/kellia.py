@@ -1,19 +1,15 @@
-#!/usr/bin/env python3
 """Process KELLIA's dictionary.
 
-The dictionary combines the TLA / DDGLC / CDO core data (see `COMPREHENSIVE`)
-with supplemental forms maintained by Coptic Scriptorium (see
-`BOHAIRIC_SUPPLEMENTAL_SHEET_URL` and `SAHIDIC_SUPPLEMENTAL`).
+The dictionary combines the TLA / DDGLC core data (see `paths.KELLIA_XML`)
+with supplemental forms maintained by Coptic Scriptorium, which we read from
+the Coptic Dictionary Online's entries (see `cdo.py`).
 
-We based this logic on the CDO's `dictionary_reader.py`:
-  https://github.com/KELLIA/dictionary/blob/master/utils/dictionary_reader.py
-Parts of it, particularly those pertaining to supplemental forms, are derived
-from pieces that, as of October 2025, live in the `dev` version of the file:
-  https://github.com/KELLIA/dictionary/blob/dev/utils/dictionary_reader.py
+The code was originally inspired by https://github.com/KELLIA/dictionary, but
+both our code base and theirs have significantly diverged since then, so the
+similarity is virtually non-existent at this point.
 
-The original code is very badly written and is completely unmaintainable, and
-it has several (small) bugs. Our code has since significantly diverged from the
-original, and there is little overlap left.
+The original code was very badly written, and had several (small) bugs, which
+we avoid.
 
 There are artifacts that we chose to ignore in our own pipeline:
 - Egyptian etymologies:
@@ -29,39 +25,20 @@ There are artifacts that we chose to ignore in our own pipeline:
 # IDs.
 
 import functools
-import itertools
 import os
 import pathlib
 import re
 import typing
-from collections import abc, defaultdict
+from collections import abc
 
-import pandas as pd
 import regex
 
 from dictionary import cls as dict_cls
-from dictionary.kellia_uni_goettingen_de import cls, tei, trie
+from dictionary.kellia_uni_goettingen_de import cdo, cls, tei, trie
 from flashcards import deck
-from utils import ensure, file, gcp, javascript, log, page, paths
+from utils import ensure, javascript, page, paths
 from xooxle import xooxle
 
-_SCRIPT_DIR: pathlib.Path = pathlib.Path(__file__).parent
-# COMPREHENSIVE is the path to the dataset that contains both Greek and Egyptian
-# words. It comprises the core of the dictionary, and is retrieved from
-# "Comprehensive Coptic Lexicon: Including Loanwords from Ancient Greek v 1.2":
-# https://refubium.fu-berlin.de/handle/fub188/27813
-# Commit 84c1044282faa12daf748858351b989376f82018 integrates some changes made
-# by Coptic Scriptorium to the CDO's copy of the XML:
-# https://github.com/KELLIA/dictionary/blob/master/xml/Comprehensive_Coptic_Lexicon-v1.2-2020.xml
-# We may have made some changes afterwards. Use `git log` or `git diff` to find
-# them.
-COMPREHENSIVE: pathlib.Path = (
-    _SCRIPT_DIR
-    / "data"
-    / "input"
-    / "v1.2"
-    / "Comprehensive_Coptic_Lexicon-v1.2-2020.xml"
-)
 NUM_GREEK: int = 3208
 NUM_EGYPTIAN: int = 8055
 
@@ -117,32 +94,11 @@ _GREEK_WORD_RE: regex.Pattern[str] = regex.compile(
     r"-?\p{Greek}[\p{Greek}\p{M}]*"
     r"(?:\([\p{Greek}\p{M}]+\)[\p{Greek}\p{M}]*)*'?-?",
 )
-FORM_RE: re.Pattern[str] = re.compile(r"[Ⲁ-ⲱϢ-ϯⳈⳉ]+[†⸗\-]?")
-PURE_COPTIC_RE: re.Pattern[str] = re.compile("[Ⲁ-ⲱϢ-ϯⳈⳉ]+")
-
-# Coptic Scriptorium has attempted to grow the data by adding supplemental
-# forms. As of the time of writing, the CDO is capable of expanding an entry by
-# adding variant forms, but it can't add any new entries that lack an ID.
-#
-# BOHAIRIC_SUPPLEMENTAL_SHEET_URL is the sheet, maintained by Coptic
-# Scriptorium, from which we retrieve the Bohairic supplemental forms directly.
-# The data that the CDO actually uses is unavailable to us, but it's derived
-# from this sheet:
-# https://github.com/KELLIA/dictionary/blob/edac2731c86fb02819436d39d127344e4e0bf514/utils/dictionary_reader.py#L591
-BOHAIRIC_SUPPLEMENTAL_SHEET_URL: str = (
-    # pylint: disable-next=line-too-long
-    "https://docs.google.com/spreadsheets/d/1r9J5nuQFQxgInLpX1Gm-I20nunIBjmGFR3CfFgK0THU/export?format=tsv"
-)
-# BOHAIRIC_SUPPLEMENTAL_VERIFIED is the number of verified entries in the
-# Bohairic supplemental data. Only this subset will be processed.
-BOHAIRIC_SUPPLEMENTAL_VERIFIED: int = 999
-_BOHAIRIC_SUPPLEMENTAL_COLS: list[str] = ["word", "lemma", "tla"]
-# SAHIDIC_SUPPLEMENTAL is a snapshot, taken in October 2025, of the CDO's
-# `inflections.tab`. As of the time of writing, it remains on the CDO's `dev`
-# branch:
-# https://github.com/KELLIA/dictionary/blob/dev/utils/inflections.tab
-SAHIDIC_SUPPLEMENTAL: pathlib.Path = (
-    _SCRIPT_DIR / "data" / "raw" / "inflections.tab"
+# _SUPPLEMENTAL_FORM_RE matches a supplemental form. A form may end with a
+# marker of a prenominal (`-`), pronominal (`⸗`), or qualitative (`†`) form, and
+# an enclitic starts with a hyphen (`-ⲡⲉ`).
+_SUPPLEMENTAL_FORM_RE: re.Pattern[str] = re.compile(
+    r"-?[Ⲁ-ⲱϢ-ϯⳈⳉ]+[†⸗\-]?",
 )
 
 _GEO_MAPPING: dict[str, str] = {
@@ -197,8 +153,8 @@ class Orthography:
     ) -> None:
         self.forms.append(Form(gram_grp, orth, geo, remarks))
 
-    def has(self, orth: str) -> bool:
-        return any(f.orth == orth for f in self.forms)
+    def has(self, orth: str, geo: str) -> bool:
+        return any(f.orth == orth and f.geo == geo for f in self.forms)
 
     def has_dialect(self, geo: str) -> bool:
         return any(f.geo == geo for f in self.forms)
@@ -815,210 +771,55 @@ def _process_entry(entry: tei.Entry) -> Word:
     )
 
 
-def snapshot() -> None:
-    """Refresh the local snapshot of the Bohairic supplemental sheet.
-
-    The snapshot is tracked in Git, so that an upstream edit shows up as a
-    `diff`. Like the Crum snapshots, it only retains the data that we process:
-    the verified rows, and the columns that we read.
-    """
-    df: pd.DataFrame = gcp.tsv_spreadsheet(
-        BOHAIRIC_SUPPLEMENTAL_SHEET_URL,
-        # We fail to parse the TSV when using the default engine, and the error
-        # messages are meaningless.
-        engine="python",
-        # Despite the meaningful error messages provided by the `python` engine,
-        # we simply skip bad lines instead of fixing them.
-        # TODO: (#305) Fix bad lines at the origin.
-        on_bad_lines="warn",
-    )
-    file.to_tsv(
-        df[:BOHAIRIC_SUPPLEMENTAL_VERIFIED][_BOHAIRIC_SUPPLEMENTAL_COLS],
-        paths.KELLIA_BOHAIRIC_SUPPLEMENTAL_TSV,
-    )
-
-
-@functools.cache
-def _bohairic_supplemental() -> abc.Mapping[str, abc.Sequence[str]]:
-    supp: defaultdict[str, list[str]] = defaultdict(list)
-    df: pd.DataFrame = file.read_tsv(
-        paths.KELLIA_BOHAIRIC_SUPPLEMENTAL_TSV,
-    )
-    # Lemma forms should appear first.
-    df = (
-        df.assign(is_lemma=df["word"] == df["lemma"])
-        .sort_values(by="is_lemma", ascending=False)
-        .drop(columns="is_lemma")
-    )
-    # The TLA column uses an inconsistent delimiter of either a comma or an
-    # underscore!
-    for _, row in df.iterrows():
-        tla: str = row["tla"]
-        assert isinstance(tla, str)
-        if "_" in tla:
-            # The TLA often uses an underscore as a TLA ID delimiter. This is
-            # currently omitted from the CDO, so we omit it on our side as well.
-            # TODO: (#305) Reconsider.
-            continue
-        form: str = row["word"]
-        assert isinstance(form, str)
-        # There is a number of malformed entries in the sheet!
-        # TODO: (#305) Fix at the origin.
-        if form in {"_warn:empty_norm_", ".", "...", "ⲉⲣ=ϣⲟⲣⲡ"}:
-            continue
-        assert PURE_COPTIC_RE.fullmatch(form), form
-
-        for tla_id in tla.split(","):
-            if not tla_id.startswith("C"):
-                # TODO: (#305) Incorporate the entries that have no
-                # TLA ID, instead of simply skipping them.
-                continue
-            if form in supp[tla_id]:
-                # This form already exists!
-                continue
-            supp[tla_id].append(form)
-    return supp
-
-
-@functools.cache
-def _sahidic_supplemental() -> abc.Mapping[str, abc.Set[str]]:
-    supp: defaultdict[str, set[str]] = defaultdict(set)
-
-    def clean(form: str) -> str:
-        return (
-            form.replace("=", "⸗").replace("+", "†").replace("!", "").strip()
-        )
-
-    for line in file.readlines(SAHIDIC_SUPPLEMENTAL):
-        if line.startswith("#"):
-            # This is a comment.
-            continue
-
-        fields: list[str] = line.split("\t")
-        tla_id: str = fields[0]
-        lemma: str = clean(fields[1])
-
-        if len(fields) == 3:
-            # This line contains a plural form.
-            form: str = fields[2].strip()
-            # Plural forms have no special characters.
-            assert clean(form) == form, form
-            assert form != lemma
-            ensure.ensure(
-                FORM_RE.fullmatch(form),
-                "line",
-                line,
-                "has an invalid form",
-                form,
-            )
-            supp[tla_id].add(form)
-            continue
-
-        for form in itertools.chain.from_iterable(
-            cell.split(",") for cell in fields[2:]
-        ):
-            form = clean(form)
-            if form == "_":
-                continue
-            if form == lemma:
-                # This is the lemma form. It's already present.
-                continue
-            ensure.ensure(
-                FORM_RE.fullmatch(form),
-                "line",
-                line,
-                "has an invalid form",
-                form,
-            )
-            supp[tla_id].add(form)
-
-    return supp
-
-
 def _words() -> abc.Generator[Word]:
     """Generate words from the dataset.
 
     Yields:
         Word objects representing entries in the dataset.
     """
-    for entry in tei.parse(COMPREHENSIVE).iter_entries():
+    for entry in tei.parse(paths.KELLIA_XML).iter_entries():
         if entry.deprecated:
             continue
         yield _process_entry(entry)
 
 
-# NOTE: Supplemental forms have been, well, problematic! They seem to be poorly
-# maintained by Coptic Scriptorium. As of October 2025, besides the difficulty
-# of accessing the latest data or a stable snapshot (see
-# `BOHAIRIC_SUPPLEMENTAL_SHEET_URL` and `SAHIDIC_SUPPLEMENTAL`), their
-# processing code seems to also suffer from at least the following:
-# - Parts-of-speech of supplemental forms are completely ignored.
-# - Markers of prenominal (`-`), pronominal (`⸗`), and qualitative (`†`)
-#   forms are omitted.
-# - For a given entry, Bohairic supplemental forms are taken on an
-#   all-or-nothing basis. No deduplication or merging is performed:
-# https://github.com/KELLIA/dictionary/blob/edac2731c86fb02819436d39d127344e4e0bf514/utils/dictionary_reader.py#L467
-#
-# Lexicon therefore often doesn't show the same set of supplemental forms that
-# the CDO shows. The CDO doesn't seem to be under active development at the
-# moment, and the above issues aren't expected to be resolved. We are
-# considering reverting the addition of supplemental forms, and relying only on
-# the core data. See #305.
+# Coptic Scriptorium has attempted to grow the data by adding supplemental
+# forms. As of the time of writing, the CDO is capable of expanding an entry by
+# adding variant forms, but it can't add any new entries that lack an ID.
+# We take the supplemental forms from the CDO's entries, so we show the same set
+# that the CDO shows.
 def _augmented_words() -> abc.Generator[Word]:
     """Augment the stream of words with supplemental forms.
 
     Yields:
-        Word objects, with supplemental entries added.
+        Word objects, with supplemental forms added.
     """
-    b_supp: abc.Mapping[str, abc.Sequence[str]] = _bohairic_supplemental()
-    s_supp: abc.Mapping[str, abc.Set[str]] = _sahidic_supplemental()
-    seen: set[str] = set()
-    # TODO: (#305) Part-of-speech info is present in the source data. Use it
-    # instead of using an empty gram_grp for all supplemental forms.
     for word in _words():
-        seen.add(word.entry_xml_id)
-        # Add Sahidic entries before Bohairic ones.
-        # Additionally, we sort Sahidic entries to make the output
-        # deterministic.
+        # The supplemental forms retain the CDO's order.
         # TODO: (#305) Use the same sorting logic used for TLA forms.
-        for orth in sorted(s_supp.get(word.entry_xml_id, ())):
-            if word.orthstring.has(orth):
-                # The word already has this orth.
+        for form in cdo.supplemental_forms(word.entry_xml_id):
+            ensure.ensure(
+                _SUPPLEMENTAL_FORM_RE.fullmatch(form.orth),
+                word.entry_xml_id,
+                "has an invalid supplemental form",
+                form.orth,
+            )
+            ensure.ensure(
+                form.dialect in GEOS,
+                word.entry_xml_id,
+                "has a supplemental form with an invalid dialect",
+                form.dialect,
+            )
+            if word.orthstring.has(form.orth, form.dialect):
+                # The word already has this form.
                 continue
-            word.orthstring.add("", orth, "S")
-        # TODO: (#305) We don't sort Bohairic forms because they already have
-        # some order that would be corrupted if we were to reorder them below.
-        # The lists retrieved have lamma forms first. We should order them by
-        # form while retaining lemma forms at the beginning.
-        b: abc.Sequence[str] = b_supp.get(word.entry_xml_id, ())
-        if any(f.geo == "B" for f in word.orthstring.forms):
-            # This word already has some Bohairic forms. It's likely that the
-            # supplemental entries are going to be redundant.
-            # TODO: (#305) This may not always be the case. Only skip
-            # supplemental entries that can be found in the list of forms.
-            yield word
-            continue
-        for orth in b:
-            word.orthstring.add("", orth, "B")
+            # TODO: (#305) The supplemental forms lack parts of speech, so they
+            # share an empty grammatical group. If an entry has a single part of
+            # speech, then the new forms probably belong to it (the only
+            # exception I can think of being verbal forms followed by a dagger
+            # that marks qualitative forms).
+            word.orthstring.add("", form.orth, form.dialect)
         yield word
-
-    # Verify that all Sahidic supplemental entries have been consumed.
-    s_orphans: set[str] = s_supp.keys() - seen
-    ensure.ensure(
-        not s_orphans,
-        "Some Sahidic inflections have invalid TLA IDs:",
-        s_orphans,
-    )
-
-    # Some Bohairic entries are not consumed.
-    # TODO: (#305) Fix at the origin.
-    for tla_id in sorted(b_supp.keys() - seen):
-        log.error(
-            "Bohairic forms",
-            b_supp[tla_id],
-            "have an invalid TLA ID",
-            tla_id,
-        )
 
 
 @functools.cache

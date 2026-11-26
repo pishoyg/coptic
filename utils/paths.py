@@ -49,10 +49,21 @@ KASSER_MORPHOLOGIQUES_TSV: pathlib.Path = file(
     MARCION,
     "data/input/kasser/morphologiques.tsv",
 )
-KELLIA_BOHAIRIC_SUPPLEMENTAL_TSV: pathlib.Path = file(
+# KELLIA_XML is the path to the dataset that contains both Greek and Egyptian
+# words. It comprises the core of the dictionary, and is retrieved from
+# "Comprehensive Coptic Lexicon: Including Loanwords from Ancient Greek v 1.2":
+# https://refubium.fu-berlin.de/handle/fub188/27813
+# Commit 84c1044282faa12daf748858351b989376f82018 integrates some changes made
+# by Coptic Scriptorium to the CDO's copy of the XML:
+# https://github.com/KELLIA/dictionary/blob/master/xml/Comprehensive_Coptic_Lexicon-v1.2-2020.xml
+# We may have made some changes afterwards. Use `git log` or `git diff` to find
+# them.
+KELLIA_XML: pathlib.Path = file(
     KELLIA,
-    "data/input/bohairic_supplemental.tsv",
+    "data/input/v1.2/Comprehensive_Coptic_Lexicon-v1.2-2020.xml",
 )
+# KELLIA_CDO_DIR holds the snapshot of the Coptic Dictionary Online's entries.
+KELLIA_CDO_DIR: pathlib.Path = directory(KELLIA, "data/raw/cdo")
 
 
 # Site Directories
