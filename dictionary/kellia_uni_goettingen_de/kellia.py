@@ -24,8 +24,6 @@ There are artifacts that we chose to ignore in our own pipeline:
   https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-oRef.html
 """
 
-# TODO: (#525) Consider using the same HTML structure as Crum.
-
 # NOTE: Our HTML uses classes rather than IDs, because Crum embeds KELLIA
 # entries in its pages, and several entries on one page would have the same
 # IDs.
