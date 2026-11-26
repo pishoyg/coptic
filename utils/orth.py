@@ -2,15 +2,27 @@
 
 import unicodedata
 
+import regex
+
+# _MARK_RE matches a mark, using the same property as `DIACRITIC_RE` in
+# docs/orth.ts.
+_MARK_RE: regex.Pattern[str] = regex.compile(r"\p{Mark}")
+
 
 def normalize(text: str) -> str:
     return unicodedata.normalize("NFD", text)
 
 
 def clean_diacritics(text: str) -> str:
-    return "".join(
-        c for c in normalize(text) if unicodedata.category(c) != "Mn"
-    )
+    """Remove all marks from the NFD-normalized text.
+
+    Args:
+        text: The text to clean.
+
+    Returns:
+        The NFD-normalized text, with all marks removed.
+    """
+    return _MARK_RE.sub("", normalize(text))
 
 
 def is_astral_combining_mark(char: str) -> bool:
@@ -28,4 +40,4 @@ def is_astral_combining_mark(char: str) -> bool:
     Returns:
         Whether `char` is a non-BMP (astral) combining mark, e.g. U+1D165.
     """
-    return ord(char) > 0xFFFF and unicodedata.category(char).startswith("M")
+    return ord(char) > 0xFFFF and bool(_MARK_RE.fullmatch(char))
