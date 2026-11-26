@@ -28,6 +28,11 @@ REF: str = "ref"
 REMARK: str = "remark"
 # SENSES is prefixed, because Crum uses `senses` for something else.
 SENSES: str = "kellia-senses"
+# SUPER_ENTRY holds the sisters of a word in its super entry.
+SUPER_ENTRY: str = "super-entry"
+# SUPER_ENTRY_TARGET is a sister in a super entry. The frontend links it to
+# Coptic Dictionary Online, using the ID in its `data-key` attribute.
+SUPER_ENTRY_TARGET: str = "super-entry-target"
 # SUPPLEMENT holds the lines that follow the explanation and the bibliography of
 # a sense: its examples, Greek equivalents, cross-references, and notes.
 SUPPLEMENT: str = "supplement"

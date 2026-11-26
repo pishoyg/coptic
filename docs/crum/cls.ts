@@ -132,6 +132,11 @@ export const SPELLING = 'spelling';
 export const STACK = 'stack';
 export const STACK_BOTTOM = 'stack-bottom';
 export const STACK_TOP = 'stack-top';
+/**
+ * SUPER_ENTRY_TARGET is a sister in a KELLIA super entry. Its `data-key`
+ * attribute holds the ID of the sister's entry.
+ */
+export const SUPER_ENTRY_TARGET = 'super-entry-target';
 export const TAB = 'tab';
 /**
  * TITLE is the class of the title of a cited work, appearing either in a

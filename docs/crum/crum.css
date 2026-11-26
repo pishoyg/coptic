@@ -785,6 +785,12 @@ ul.kellia-senses,
   display: none;
 }
 
+/* A card lists the sisters of a word in its super entry, with each title and
+ * sister on a line of its own. */
+.super-entry > * {
+  display: block;
+}
+
 /* stylelint-enable no-descending-specificity */
 
 .xr {

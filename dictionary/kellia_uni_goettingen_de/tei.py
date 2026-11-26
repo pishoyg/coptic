@@ -1382,6 +1382,35 @@ class Entry(Element[Form | GramGrp | Etym | Xr | Sense | Note]):
         assert gram_grp is not None, form.path
         return gram_grp
 
+    def _parts_of_speech(self) -> abc.Generator[PartOfSpeech]:
+        """Yield the parts of speech of the entry, in order of precedence.
+
+        The entry's grammatical group takes precedence, followed by that of the
+        lemma, then those of the other live forms.
+
+        Yields:
+            Parts of speech.
+        """
+        gram_grps: list[GramGrp | None] = [self.gram_grp, self.lemma.gram_grp]
+        gram_grps.extend(
+            f.gram_grp
+            for f in self.forms
+            if f is not self.lemma and not f.deprecated
+        )
+        for gram_grp in gram_grps:
+            if gram_grp is not None and gram_grp.pos is not None:
+                yield gram_grp.pos.text
+
+    @property
+    def part_of_speech(self) -> PartOfSpeech:
+        """Return the part of speech of the entry.
+
+        Returns:
+            The first part of speech in order of precedence (see
+            `_parts_of_speech`), which validation guarantees to exist.
+        """
+        return next(self._parts_of_speech())
+
     @typing.override
     def _validate(self) -> None:
         lemmas: int = len(self._lemmas)
@@ -1411,6 +1440,10 @@ class Entry(Element[Form | GramGrp | Etym | Xr | Sense | Note]):
             or self.gram_grp is not None
             or self.lemma.gram_grp is not None,
             "has a lemma that no other form repeats, with no grammatical group",
+        )
+        self._ensure(
+            next(self._parts_of_speech(), None) is not None,
+            "has no part of speech",
         )
         forms: dict[str, Form] = {f.xml_id: f for f in self.forms}
         for form in self.forms:
@@ -1474,6 +1507,18 @@ class Body(Element[Entry | SuperEntry]):
                 yield from sub.entries
             else:
                 yield sub
+
+    def super_entries_by_entry_id(self) -> dict[str, SuperEntry]:
+        """Map the ID of each entry that belongs to a super entry to it.
+
+        Returns:
+            A dictionary from entry IDs to their super entries.
+        """
+        return {
+            entry.xml_id: super_entry
+            for super_entry in self.super_entries
+            for entry in super_entry.entries
+        }
 
 
 def parse(path: pathlib.Path) -> Body:

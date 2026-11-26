@@ -24,7 +24,9 @@ There are artifacts that we chose to ignore in our own pipeline:
 # entries in its pages, and several entries on one page would have the same
 # IDs.
 
+import collections
 import functools
+import itertools
 import os
 import pathlib
 import re
@@ -38,6 +40,9 @@ from dictionary.kellia_uni_goettingen_de import cdo, cls, tei, trie
 from flashcards import deck
 from utils import ensure, javascript, page, paths
 from xooxle import xooxle
+
+# DATA_KEY holds the ID of the entry that an element refers to.
+DATA_KEY: str = "data-key"
 
 NUM_GREEK: int = 3208
 NUM_EGYPTIAN: int = 8055
@@ -577,6 +582,16 @@ def _form_sort_key(form: tei.Form) -> tuple[str, str]:
     )
 
 
+# _SUPER_ENTRY_TITLES gives the title of each type of entry in a super entry.
+# An entry with no type is usually the head word of the group.
+_SUPER_ENTRY_TITLES: dict[tei.EntryType | None, str] = {
+    None: "Related",
+    "hom": "Homonyms",
+    "foreign": "Foreign",
+    "compound": "Compounds",
+}
+
+
 class Word:
     """Word represents a word in the KELLIA dictionary.
 
@@ -592,12 +607,15 @@ class Word:
         langs: dict[str, Lang],
         etym_string: Etymology,
         is_greek: bool,
+        group: tei.SuperEntry | None,
     ) -> None:
         self.entry_xml_id: str = entry_xml_id
         self.orthstring: Orthography = orthstring
         self.langs: dict[str, Lang] = langs
         self.etym_string: Etymology = etym_string
         self.is_greek: bool = is_greek
+        # group is the super entry that the word belongs to, if any.
+        self.group: tei.SuperEntry | None = group
 
     def merge_langs(self) -> Lang:
         merged: Lang = Lang("MERGED")
@@ -645,6 +663,59 @@ class Word:
         )
         yield "</ul>"
 
+    def super_entry_html(self) -> str:
+        """Render the sisters of the word in its super entry.
+
+        We list the sisters in the order of the dataset, which groups a head
+        word with its homonyms and compounds. Each run of sisters of the same
+        type is preceded by the title of the type, so a type may recur (such
+        as when a group has two head words, each followed by its compounds).
+        The word itself is omitted, so a run that consisted of it alone
+        vanishes, and the runs that it separated merge. Each sister occupies a
+        line of its own.
+
+        The sisters retain their IDs, so the frontend can link them to Coptic
+        Dictionary Online. Their lemmas may coincide with one another, or with
+        that of the word (such as the homonyms `ⲁ-`), so a lemma that recurs
+        in the group is followed by the part of speech of its entry. They may
+        still coincide, which we accept.
+        TODO: (#0) Consider adding the meaning as well, for further
+        disambiguation. Marcion's sisters are quite verbose (for what it's
+        worth), which is the exact opposite.
+
+        Returns:
+            The HTML of the sisters, or the empty string if the word has no
+            live sisters.
+        """
+        if self.group is None:
+            return ""
+        members: list[tei.Entry] = [
+            e for e in self.group.entries if not e.deprecated
+        ]
+        sisters: list[tei.Entry] = [
+            e for e in members if e.xml_id != self.entry_xml_id
+        ]
+        if not sisters:
+            return ""
+        counts: collections.Counter[str] = collections.Counter(
+            e.lemma.orth.text for e in members
+        )
+        lines: list[str] = []
+        for typ, run in itertools.groupby(sisters, key=lambda e: e.type):
+            lines.append(f"<i>{_SUPER_ENTRY_TITLES[typ]}:</i>")
+            for sister in run:
+                label: str = sister.lemma.orth.text
+                if counts[label] > 1:
+                    label += (
+                        f' <span class="{dict_cls.TYPE}">'
+                        f"({sister.part_of_speech})</span>"
+                    )
+                lines.append(
+                    f'<span class="{cls.SUPER_ENTRY_TARGET}" '
+                    f'{DATA_KEY}="{sister.xml_id}">{label}</span>',
+                )
+        return f'<div class="{cls.SUPER_ENTRY}">{"".join(lines)}</div>'
+
     def cdo(self) -> str:
         return paths.coptic_dictionary_online(self.entry_xml_id)
 
@@ -662,7 +733,7 @@ def _geo(form: tei.Form) -> str:
     return geo
 
 
-def _process_entry(entry: tei.Entry) -> Word:
+def _process_entry(entry: tei.Entry, group: tei.SuperEntry | None) -> Word:
     lemma: tei.Form = entry.lemma
     lemma_orth: str = lemma.orth.text
     lemma_key: tuple[str, str] = (lemma_orth, _geo(lemma))
@@ -794,6 +865,7 @@ def _process_entry(entry: tei.Entry) -> Word:
         langs,
         Etymology(entry),
         entry.ddglc,
+        group,
     )
 
 
@@ -803,10 +875,12 @@ def _words() -> abc.Generator[Word]:
     Yields:
         Word objects representing entries in the dataset.
     """
-    for entry in tei.parse(paths.KELLIA_XML).iter_entries():
+    body: tei.Body = tei.parse(paths.KELLIA_XML)
+    super_entries: dict[str, tei.SuperEntry] = body.super_entries_by_entry_id()
+    for entry in body.iter_entries():
         if entry.deprecated:
             continue
-        yield _process_entry(entry)
+        yield _process_entry(entry, super_entries.get(entry.xml_id))
 
 
 # Coptic Scriptorium has attempted to grow the data by adding supplemental
@@ -904,6 +978,7 @@ def notes_aux(
         back: str = _join(
             word.senses_html(),
             word.etym_string.amir,
+            word.super_entry_html(),
             page.HORIZONTAL_RULE,
             "<footer>",
             "Coptic Dictionary Online: ",
@@ -950,6 +1025,17 @@ XOOXLE: xooxle.Xooxle = xooxle.Xooxle(
     extract=[
         xooxle.Selector({"name": "title"}),
         xooxle.Selector({"name": "footer"}, force=False),
+        # A super entry lists the lemmas of the sisters of a word. Searching
+        # them would match every sister of a word that a query finds, so we
+        # keep them out of the index, and only show them in the notes.
+        #
+        # We considered displaying them in the index without searching them,
+        # which Xooxle doesn't currently support, but #379 proposes as a
+        # feature. We abandoned it due to (unsubstantiated) fear that it may
+        # well turn out to be a rabbit hole; and because KELLIA is deemed a
+        # secondary dictionary anyway whose primary role is to cover Greek
+        # loanwords rather than Egyptian words.
+        xooxle.Selector({"class_": cls.SUPER_ENTRY}, force=False),
     ],
     captures=[
         xooxle.Capture(

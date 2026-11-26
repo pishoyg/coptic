@@ -429,6 +429,26 @@ export function handle(root: HTMLElement, highlighter: high.Highlighter): void {
   crum.handleDialect(root, highlighter);
   handleSources(root);
   handleCrossReferences(root);
+  handleSuperEntries(root);
+}
+
+// On a super-entry sister, the ID of its entry lives in a `data-key` attribute.
+const DATA_KEY = 'key';
+
+/**
+ * Link the sisters in a super entry to their entries on Coptic Dictionary
+ * Online.
+ *
+ * @param root
+ */
+function handleSuperEntries(root: HTMLElement): void {
+  root
+    .querySelectorAll<HTMLElement>(css.c(cls.SUPER_ENTRY_TARGET))
+    .forEach((el: HTMLElement): void => {
+      const key: string | undefined = el.dataset[DATA_KEY];
+      log.ensure(key, 'A super-entry sister has no key:', el.outerHTML);
+      html.linkify(el, paths.copticDictionaryOnline(key));
+    });
 }
 
 /**
