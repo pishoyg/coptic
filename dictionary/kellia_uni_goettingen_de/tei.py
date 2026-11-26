@@ -971,8 +971,9 @@ class Quote(Element[typing.Never]):
     def phrase(self) -> bool:
         """Whether this is a Coptic phrase, rather than its translation.
 
-        A phrase starts with a Coptic letter, while a translation may only
-        mention Coptic words (such as `vgl. ⲁⲗ`).
+        Returns:
+            Whether the quote starts with a Coptic letter. A translation may
+            only mention Coptic words (such as `vgl. ⲁⲗ`).
         """
         return bool(_COPTIC_LETTER.match(self.text))
 
@@ -1353,18 +1354,30 @@ class Entry(Element[Form | GramGrp | Etym | Xr | Sense | Note]):
         (lemma,) = self._lemmas
         return lemma
 
+    @property
+    def lemma_repeated(self) -> bool:
+        """Whether another live form repeats the spelling of the lemma.
+
+        Returns:
+            Whether a form, other than the lemma, bears its spelling.
+        """
+        return any(
+            f.orth.text == self.lemma.orth.text
+            for f in self.forms
+            if f is not self.lemma and not f.deprecated
+        )
+
     def grammar(self, form: Form) -> GramGrp:
-        """Return the grammatical group of a form, which isn't the lemma.
+        """Return the grammatical group of a form.
 
         A form without a grammatical group of its own inherits the entry's.
 
         Args:
-            form: A form of the entry, other than the lemma.
+            form: A form of the entry.
 
         Returns:
             The grammatical group of the form.
         """
-        assert form is not self.lemma, form.path
         gram_grp: GramGrp | None = form.gram_grp or self.gram_grp
         assert gram_grp is not None, form.path
         return gram_grp
@@ -1390,6 +1403,14 @@ class Entry(Element[Form | GramGrp | Etym | Xr | Sense | Note]):
                 if f is not self.lemma
             ),
             "has a form, other than the lemma, with no grammatical group",
+        )
+        # A lemma that no other form repeats gets rendered as a form of its
+        # own, so it needs a grammatical group too (see `kellia.py`).
+        self._ensure(
+            self.lemma_repeated
+            or self.gram_grp is not None
+            or self.lemma.gram_grp is not None,
+            "has a lemma that no other form repeats, with no grammatical group",
         )
         forms: dict[str, Form] = {f.xml_id: f for f in self.forms}
         for form in self.forms:

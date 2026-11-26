@@ -16,6 +16,8 @@ EXAMPLE: str = "example"
 # GREEK_REF cites the lexicons that list the Greek lemma of a loanword.
 GREEK_REF: str = "greek-ref"
 LANG: str = "lang"
+# LEMMA is a word form that bears the spelling of the lemma of its entry.
+LEMMA: str = "lemma"
 # NOTE is a note of a sense, or of its translation. It's prefixed, because
 # `note` is the class of the body of a Crum page.
 NOTE: str = "kellia-note"

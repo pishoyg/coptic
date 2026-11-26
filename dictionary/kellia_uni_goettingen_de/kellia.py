@@ -141,7 +141,10 @@ def _span(content: str, *classes: str) -> str:
 class Orthography:
     """Orthography stores the word forms."""
 
-    def __init__(self) -> None:
+    def __init__(self, lemma_orth: str) -> None:
+        # lemma_orth is the spelling of the lemma. The forms that bear it are
+        # marked as such.
+        self.lemma_orth: str = lemma_orth
         self.forms: list[Form] = []
 
     def add(
@@ -212,9 +215,12 @@ class Orthography:
                 # The highlighter dims the children of a `word` that belong to
                 # none of the active dialects, so each child carries the
                 # classes of its dialects. See `docs/crum/highlight.ts`.
+                spelling: list[str] = [dict_cls.SPELLING, *geos]
+                if orth == self.lemma_orth:
+                    spelling.append(cls.LEMMA)
                 yield "<tr>"
                 yield f'<td class="{" ".join([dict_cls.WORD, *geos])}">'
-                yield _span(orth, dict_cls.SPELLING, *geos)
+                yield _span(orth, *spelling)
                 yield " "
                 yield "".join(
                     _span(geo, dict_cls.DIALECT, geo) for geo in geos
@@ -658,27 +664,47 @@ def _geo(form: tei.Form) -> str:
 
 def _process_entry(entry: tei.Entry) -> Word:
     lemma: tei.Form = entry.lemma
+    lemma_orth: str = lemma.orth.text
+    lemma_key: tuple[str, str] = (lemma_orth, _geo(lemma))
     forms: list[tei.Form] = sorted(
         (f for f in entry.forms if not f.deprecated),
         key=_form_sort_key,
     )
+    # The lemma comes first, either itself or through the forms that repeat
+    # its spelling, preferably in its own dialect. Since a type and a form
+    # retain the order of their first occurrence (see `Orthography._groups`),
+    # this puts the lemma at the top of the table.
     forms = sorted(
         forms,
-        key=lambda form: form.orth.text == lemma.orth.text,
-        reverse=True,
+        key=lambda form: (
+            form is not lemma,
+            (form.orth.text, _geo(form)) != lemma_key,
+            form.orth.text != lemma_orth,
+        ),
     )
 
-    orthography: Orthography = Orthography()
+    orthography: Orthography = Orthography(lemma_orth)
 
     for form in forms:
-        # TODO: (#51) Render the lemma. We skip it, assuming that another form
-        # repeats it, but no form does in a few dozen entries. Some lemmas are
-        # merely normalized spellings (`ⲙⲉϩⲧⲟⲟⲧ⸗` of `ⲙⲉϩ ⲧⲟⲟⲧ⸗`), which still
-        # helps search. Others are forms of their own, which we lose entirely,
-        # along with their grammar (such as the prenominal `ϩⲁⲧⲛ-`, of which
-        # only the pronominal `ϩⲁⲧⲟⲟⲧ⸗` shows). The note of a lemma is lost
-        # as well (such as `(once)`), unless another form repeats it too.
-        if form is lemma:
+        # The lemma usually repeats the spelling of another form, which then
+        # bears the lemma class instead (see `Orthography.table_aux`). We
+        # render the lemma only when no other form repeats its spelling. Some
+        # such lemmas are merely normalized spellings (`ⲙⲉϩⲧⲟⲟⲧ⸗` of
+        # `ⲙⲉϩ ⲧⲟⲟⲧ⸗`), which still helps search. Others are forms of their own
+        # (such as the prenominal `ϩⲁⲧⲛ-`, of which the pronominal `ϩⲁⲧⲟⲟⲧ⸗` is
+        # the only other form).
+        # We ignore the dialect of the lemma when looking for a repetition,
+        # because it's often Sahidic by default, rather than by attestation
+        # (such as `ϫⲓⲛⲁⲓⲁⲓ`, whose only other form is Bohairic, since `ϫⲓⲛ-` is
+        # the Bohairic prefix). Rendering such a lemma would add a dialect
+        # that the word likely lacks. As of the time of writing, a repeated
+        # lemma loses no note, nor any grammar that the forms repeating it
+        # don't specify further.
+        # TODO: (#305) The next version of the XML will largely resolve the
+        # issues of the lemma, such as its repetition by other forms. Once
+        # it's out, simplify this logic, or make the checks stricter (such as
+        # validating that the lemma repeats no form, or that it does).
+        if form is lemma and entry.lemma_repeated:
             continue
 
         # The notes of the grammatical group are remarks on the form, rather
@@ -899,6 +925,10 @@ def notes_aux(
         )
 
 
+# TODO: (#0) Consider retaining the `lemma` class, and using it for ranking.
+# The frontend could rank a result whose match falls in the lemma above one
+# whose match falls in another form, like Crum does with its headwords (see
+# `docs/crum/digital.ts`).
 _KELLIA_RETAIN_CLASSES = {
     dict_cls.WORD,
     dict_cls.SPELLING,
