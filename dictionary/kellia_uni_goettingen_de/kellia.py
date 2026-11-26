@@ -232,7 +232,7 @@ class Orthography:
                 )
                 for remark in remarks:
                     yield " "
-                    yield _span(remark, cls.REMARK, *geos)
+                    yield _span(remark, dict_cls.REMARK, *geos)
                 yield "</td>"
                 yield "</tr>"
             yield "</tbody>"
@@ -1010,7 +1010,7 @@ _KELLIA_RETAIN_CLASSES = {
     dict_cls.DIALECT,
     dict_cls.PART_OF_SPEECH,
     cls.LANG,
-    cls.REMARK,
+    dict_cls.REMARK,
     dict_cls.GLOSS,
     cls.BIBL,
     cls.REF,

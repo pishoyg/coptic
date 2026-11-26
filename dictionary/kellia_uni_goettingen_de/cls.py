@@ -24,8 +24,6 @@ NOTE: str = "kellia-note"
 ORTHS: str = "orths"
 # REF lists the Greek equivalents of an Egyptian sense.
 REF: str = "ref"
-# REMARK is a remark on a word form, such as how rare it is.
-REMARK: str = "remark"
 # SENSES is prefixed, because Crum uses `senses` for something else.
 SENSES: str = "kellia-senses"
 # SUPER_ENTRY holds the sisters of a word in its super entry.
