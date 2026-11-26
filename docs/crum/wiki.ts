@@ -3,7 +3,7 @@
  *
  * NOTE: Changes to the enricher may require corresponding updates to the
  * materializer (`dictionary/marcion_sourceforge_net/wiki.ts`) or Ambrose
- * (`.claude/commands/ambrose.md`).
+ * (`.agents/commands/ambrose.md`).
  */
 /* eslint-disable max-lines */
 

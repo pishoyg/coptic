@@ -15,10 +15,11 @@ or list what came out fine.
 
 ## Memory
 
-Project memory lives in `.claude/memory/`, one fact per file, indexed by
-`.claude/memory/MEMORY.md` (imported below). Save knowledge about this repo
-there, not in your auto-memory directory under `$HOME`, and add a one-line
-pointer to the index.
+Project memory lives in `.agents/memory/`, one fact per file, indexed by
+`.agents/memory/MEMORY.md` (imported below; read it yourself if your agent
+doesn't expand `@` imports). Save knowledge about this repo there, not in
+your auto-memory directory under `$HOME`, and add a one-line pointer to the
+index.
 
 Each file has this frontmatter, followed by the fact. For `feedback` and
 `project`, add **Why:** and **How to apply:** lines. Link related memories
@@ -33,14 +34,14 @@ metadata:
 ---
 ```
 
-This repo is public. Anything saved in `.claude/memory/` gets committed and
+This repo is public. Anything saved in `.agents/memory/` gets committed and
 published. Keep these in the user's auto-memory instead:
 
 - Facts about the user's machine, network, or employer
 - Personal preferences that aren't conventions for this repo
 - Anything private, credentials, or contact details
 
-@.claude/memory/MEMORY.md
+@.agents/memory/MEMORY.md
 
 ## Common Commands
 

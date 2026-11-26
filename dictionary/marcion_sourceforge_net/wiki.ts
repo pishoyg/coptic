@@ -12,7 +12,7 @@
  * that `/ambrose` can read a file instead of driving a live browser.
  *
  * The notation is specified in the table below, and summarized in
- * `.claude/commands/ambrose.md`. If it were to change, Ambrose needs to be
+ * `.agents/commands/ambrose.md`. If it were to change, Ambrose needs to be
  * informed.
  */
 /* eslint-disable max-lines */
