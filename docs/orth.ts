@@ -48,7 +48,7 @@ export function translation(text: string): Translation {
   // surrogate halves would each fail the `\p{Mark}` test and be kept, desyncing
   // this mapping from `cleanDiacritics`. That precondition is not universal —
   // astral combining marks exist (e.g. U+1D165) — so the Xooxle index builder
-  // rejects them (see `_diacritic_free_text` in `xooxle/xooxle.py`).
+  // rejects them (see `_normalized_text` in `xooxle/xooxle.py`).
   for (let i = 0; i < text.length; i++) {
     if (!text.charAt(i).match(DIACRITIC_RE)) {
       mapping.push(i);
