@@ -14,3 +14,4 @@
 - [Anki Desktop is Chrome 140](anki-desktop-tooltip-stretch.md) — tooltips once opened at height 0 there; test tooltip CSS in Anki, not just Playwright
 - [Anki Desktop remote debugging](anki-desktop-remote-debugging.md) — `QTWEBENGINE_REMOTE_DEBUGGING=9222` + CDP; render a card via `_showQuestion`
 - [Separate data, code, and output commits](separate-data-code-output-commits.md) — input-data fixes, code, and generated output never share a commit
+- [KELLIA entry-type conventions](kellia-entry-type-conventions.md) — collocations share their base's type (checkable); `hom` and verb+adverb typing aren't
