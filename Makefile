@@ -131,6 +131,7 @@ crum: FORCE
 	# Generate the Crum lexicon artefacts.
 	./dictionary/marcion_sourceforge_net/main.py
 	./dictionary/marcion_sourceforge_net/pisaxo.ts
+	./dictionary/marcion_sourceforge_net/bib.ts
 
 ########## CRUM WIKI ENRICHMENT ##########
 # Materialize the enrichment that `docs/crum/wiki.ts` performs in the browser.
