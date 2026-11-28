@@ -427,7 +427,9 @@ async function main(): Promise<void> {
   // The form is now populated with query parameters. Update language selection.
   updateLanguageSelection(form, manager, highlighter);
 
-  const json: xoox.XooxleRaw = await xoox.fetchIndex('bible.json');
+  const json: xoox.XooxleRaw = (await fetch('bible.json').then(
+    (raw: Response) => raw.json()
+  )) as xoox.XooxleRaw;
   const xooxle: xoox.Xooxle = new xoox.Xooxle(json, form, SearchResult);
 
   // Focus after reading the index, to give the user an indication that the page

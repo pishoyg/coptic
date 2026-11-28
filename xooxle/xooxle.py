@@ -78,7 +78,6 @@ Concurrency
     measurable gain.
 """
 
-import hashlib
 import pathlib
 import re
 import typing
@@ -99,11 +98,6 @@ _KEY: str = "KEY"
 # Batching amortizes the cost of pickling the task, which includes the Xooxle
 # object itself.
 _CHUNK_SIZE: int = 16
-
-# _HASH_SUFFIX is appended to the index path to get the path of the file
-# holding the index's hash. This must match the suffix expected by
-# `fetchIndex` in `docs/xooxle.ts`.
-_HASH_SUFFIX: str = ".hash"
 
 _COLLAPSIBLE_SPACE: re.Pattern[str] = re.compile(r"\s{2,}", re.ASCII)
 
@@ -160,9 +154,6 @@ class Metadata(typing.TypedDict):
     """Represents the metadata object with its layer structure."""
 
     layers: list[list[str]]
-    # hash is a hash of the index content. The site puts it in the index URL,
-    # and uses it to detect a stale copy served under a new hash.
-    hash: str
 
 
 class Index(typing.TypedDict):
@@ -643,27 +634,15 @@ class Xooxle:
                     chunksize=_CHUNK_SIZE,
                 ),
             )
-        entries: list[dict[str, Field | str]] = list(data)
-        # NOTE: We serialize the content once to hash it, and once more to
-        # write it. A single pass would need the hash to cover the written
-        # file, which contains the hash.
-        content_hash: str = hashlib.sha256(
-            file.json_dumps([entries, self._layers]).encode("utf-8"),
-        ).hexdigest()
         json: Index = {
-            "data": entries,
+            "data": list(data),
             "metadata": {
                 "layers": self._layers,
-                "hash": content_hash,
             },
         }
 
         self.validate(json)
         file.write(file.json_dumps(json), self._output)
-        # Write the hash next to the index, so the site can learn it before
-        # fetching the index.
-        output: pathlib.Path = pathlib.Path(self._output)
-        file.write(content_hash, output.with_name(output.name + _HASH_SUFFIX))
 
     def validate(self, json: Index) -> None:
         keys: list[str] = [

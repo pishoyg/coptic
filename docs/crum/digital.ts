@@ -525,7 +525,9 @@ export async function init(): Promise<void> {
       // event listeners on shared elements (such as the checkboxes and the
       // query parameters) get duplicated. Deduplicate them.
       new xoox.Xooxle(
-        await xoox.fetchIndex(xooxle.indexURL),
+        (await fetch(xooxle.indexURL).then((raw: Response) =>
+          raw.json()
+        )) as xoox.XooxleRaw,
         new xoox.Form({
           searchBoxID: id.SEARCH_BOX,
           fullWordCheckboxID: id.FULL_WORD_CHECKBOX,
