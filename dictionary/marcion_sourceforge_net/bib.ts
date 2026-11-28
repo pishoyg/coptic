@@ -272,18 +272,51 @@ function anyOf(abbreviations: string[]): string {
 }
 
 /**
- * @param source
- * @returns A pattern that matches every citation of the source: any of its
- * variants, bearing any of its prefixes, any of its postfixes, both, or
- * neither.
+ * The parts of a citation that a search requires. Any variant may match in
+ * place of an unpinned one, and unpinned fixes are optional.
+ * NOTE: The keys of fixes are named after their fields, but each holds a
+ * single name.
  */
-function citations(source: sax.Source): string {
-  const prefixes: string[] = Object.keys(source.prefixes ?? {});
-  const postfixes: string[] = Object.keys(source.postfixes ?? {});
+type Pin = Partial<Record<'variant' | Fixes, string>>;
+
+/**
+ * @param fixes - The postfixes or prefixes of a source.
+ * @param pinned - The fix to require, if any.
+ * @param separate - Attaches the optional space between a fix and a variant.
+ * @returns A pattern that matches the pinned fix, or else any of the fixes or
+ * none.
+ */
+function fixPattern(
+  fixes: Record<string, sax.Fix> | null | undefined,
+  pinned: string | undefined,
+  separate: (p: string) => string
+): string {
+  if (pinned !== undefined) {
+    return separate(pattern(pinned));
+  }
+  const names: string[] = Object.keys(fixes ?? {});
+  return names.length ? `(${separate(anyOf(names))})?` : '';
+}
+
+/**
+ * @param source
+ * @param pin - The parts of the citation to require.
+ * @returns A pattern that matches the citations of the source that bear the
+ * pinned parts: any of its variants, unless one is pinned, bearing any of its
+ * prefixes and postfixes, or none, unless one is pinned.
+ * NOTE: The fixes that aren't pinned must remain optional, rather than be
+ * left out. Searches match whole words, and a fix may be glued to its
+ * variant, as in `ShC`, where `Sh` alone ends mid-word and doesn't match.
+ */
+function citations(source: sax.Source, pin: Pin = {}): string {
   return [
-    prefixes.length ? `(${anyOf(prefixes)} ?)?` : '',
-    anyOf(source.variants),
-    postfixes.length ? `( ?${anyOf(postfixes)})?` : '',
+    fixPattern(source.prefixes, pin.prefixes, (p: string): string => `${p} ?`),
+    pin.variant === undefined ? anyOf(source.variants) : pattern(pin.variant),
+    fixPattern(
+      source.postfixes,
+      pin.postfixes,
+      (p: string): string => ` ?${p}`
+    ),
   ].join('');
 }
 
@@ -569,7 +602,7 @@ class Entry {
   private variants(source: sax.Source): string {
     const sigla: string = source.variants
       .map((variant: string): string =>
-        search(pattern(variant), escape(variant))
+        search(citations(source, { variant }), escape(variant))
       )
       .join(' · ');
     const all: string = search(citations(source), 'Citations');
@@ -611,13 +644,9 @@ class Entry {
     if (!Object.keys(record).length) {
       return notes;
     }
-    const variants: string = anyOf(source.variants);
     const rows: string = Object.entries(record)
       .map(([name, interpretation]: [string, sax.Fix]): string => {
-        const query: string =
-          field === 'postfixes'
-            ? `${variants} ?${pattern(name)}`
-            : `${pattern(name)} ?${variants}`;
+        const query: string = citations(source, { [field]: name });
         return `<tr><td class="abbreviation">${search(query, escape(name))}</td><td>${this.meaning(name, interpretation)}${this.notes.render(field, name)}</td></tr>`;
       })
       .join('');
