@@ -202,8 +202,8 @@ export class Pagination {
    * Rendering happens in two passes: `fit` finds the largest slot budget whose
    * chips fit the available width, then the chosen chips are rebuilt with their
    * hover tooltips wired. The tooltips are attached only on this final pass,
-   * not on every measured budget, so the measurement does not create and
-   * orphan popovers it never shows.
+   * not on every measured budget, so the measurement does not wire tooltips
+   * that it throws away.
    *
    * The bar is measured against the live viewport, so it is re-rendered on
    * paging, re-searching, and (debounced) window `resize` — see
@@ -251,8 +251,6 @@ export class Pagination {
   public clear(): void {
     this.last = null;
     this.container.replaceChildren();
-    // Remove orphaned tooltips.
-    tool.cleanupOrphans();
   }
 
   /**

@@ -21,6 +21,9 @@ import * as tool from '../docs/tooltip.js';
  * the page. */
 const KEY = '1';
 
+/* The URL of the tooltip module, as the page imports it. */
+const MODULE = `${paths.HOME}tooltip.js`;
+
 /* Attribute marking the trigger that a test picked, so the test can find it
  * again after picking it inside the page. */
 const PICKED = 'data-picked';
@@ -44,11 +47,9 @@ const TOLERANCE = 1;
 
 interface PickArgs {
   selector: string;
-  tooltip: string;
+  module: string;
   picked: string;
   rule: 'right' | 'long';
-  anchorName: string;
-  positionAnchor: string;
 }
 
 /**
@@ -66,29 +67,16 @@ async function pick(
   score: 'right' | 'long'
 ): Promise<play.Locator> {
   await page.evaluate(
-    ({
-      selector,
-      tooltip,
-      picked,
-      rule,
-      anchorName,
-      positionAnchor,
-    }: PickArgs): void => {
+    async ({ selector, module, picked, rule }: PickArgs): Promise<void> => {
       const all = Array.from(document.querySelectorAll<HTMLElement>(selector));
-      const tooltips = Array.from(
-        document.querySelectorAll<HTMLElement>(tooltip)
-      );
+      // Tooltips stay detached until they show, so look them up through the
+      // page's own instance of the module.
+      const mod = (await import(module)) as typeof tool;
       const value = (el: HTMLElement): number => {
         if (rule === 'right') {
           return el.getBoundingClientRect().right;
         }
-        const anchor = el.style.getPropertyValue(anchorName);
-        return (
-          tooltips.find(
-            (t: HTMLElement): boolean =>
-              t.style.getPropertyValue(positionAnchor) === anchor
-          )?.textContent.length ?? 0
-        );
+        return mod.tooltip(el)?.textContent.length ?? 0;
       };
       const candidates = all.slice(Math.floor(all.length / 2));
       if (!candidates.length) {
@@ -98,15 +86,18 @@ async function pick(
         (a: HTMLElement, b: HTMLElement): HTMLElement =>
           value(b) > value(a) ? b : a
       );
+      if (rule === 'long' && !value(best)) {
+        throw new Error(
+          `No trigger has a tooltip; is ${module} the page's module?`
+        );
+      }
       best.setAttribute(picked, '');
     },
     {
       selector: css.nested(cls.WIKI, cls.REFERENCE),
-      tooltip: css.c(tool.CLS.TOOLTIP),
+      module: MODULE,
       picked: PICKED,
       rule: score,
-      anchorName: tool.ANCHOR_NAME,
-      positionAnchor: tool.POSITION_ANCHOR,
     }
   );
   return page.locator(`[${PICKED}]`);

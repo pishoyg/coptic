@@ -5,7 +5,6 @@ import * as log from './logger.js';
 import * as orth from './orth.js';
 import * as cls from './cls.js';
 import * as str from './str.js';
-import * as tool from './tooltip.js';
 import * as dev from './dev.js';
 import * as pagination from './pagination.js';
 import * as params from './params.js';
@@ -356,9 +355,6 @@ export class Form {
   public clearOutputFields(): void {
     this.tbody.replaceChildren();
     this.messageBox.replaceChildren();
-    /* Enrichers wire many tooltips into the search results; those popovers
-     * live under <body>, so they survive the tbody clear above. Sweep them. */
-    tool.cleanupOrphans();
   }
 }
 

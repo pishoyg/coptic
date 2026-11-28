@@ -176,7 +176,7 @@ const KNOWN_TAGS: ReadonlySet<string> = new Set<string>([
 const UNINTERESTING: readonly string[] = [
   // Addenda are handled through the nested <ins> and / or <del> tags.
   cls.ADDENDUM,
-  // Enrichment marks its own triggers, and reparents the popovers away.
+  // Enrichment marks its own triggers, and moves their content into tooltips.
   tool.CLS.TIPPER,
   // Presentational, so they need no notation of their own.
   cls.STACK,
@@ -325,12 +325,6 @@ function load(html: string): void {
  * Built after `wiki.handle` has run, against the resulting document.
  */
 class Serializer {
-  /** Popovers by the anchor name of their trigger. */
-  private readonly tips: Map<string, HTMLElement> = new Map<
-    string,
-    HTMLElement
-  >();
-
   /** The page being serialized, for error messages. */
   private readonly key: string;
 
@@ -354,14 +348,6 @@ class Serializer {
    */
   public constructor(key: string) {
     this.key = key;
-    document
-      .querySelectorAll<HTMLElement>(`.${tool.CLS.TOOLTIP}[popover]`)
-      .forEach((tip: HTMLElement): void => {
-        const anchor: string = tip.style.getPropertyValue(tool.POSITION_ANCHOR);
-        if (anchor) {
-          this.tips.set(anchor, tip);
-        }
-      });
     this.antecedents = this.links();
   }
 
@@ -699,6 +685,13 @@ class Serializer {
    * its head. The direct antecedent is the one member of the chain whose own
    * chain is the rest of it. That is read off the chains alone, so it holds
    * whatever order the spans are later serialized in.
+   *
+   * LIMITATION: Only links within the document are read back. Tooltip content
+   * stays detached until the tooltip shows (see `docs/tooltip.ts`), so a chain
+   * inside a footnote, which `handleFootnotes` enriches as a scope of its own
+   * (e.g. an `ib` resolving to a reference earlier in the same footnote), goes
+   * unseen. Its anaphor still serializes, just without its antecedent. As of
+   * the time of writing, no footnote contains an anaphor.
    */
   private links(): Map<HTMLElement, HTMLElement> {
     const lit = (): Set<HTMLElement> =>
@@ -816,10 +809,10 @@ class Serializer {
 
   /**
    * @param el - A tooltip trigger.
-   * @returns Its popover, if it has one.
+   * @returns Its tooltip, if it has one.
    */
   private tip(el: HTMLElement): HTMLElement | undefined {
-    return this.tips.get(el.style.getPropertyValue(tool.ANCHOR_NAME));
+    return tool.tooltip(el);
   }
 
   /**

@@ -1,8 +1,9 @@
 /* CSS for both hover-invoked and click-invoked tooltips.
  *
- * Wired tooltips live under <body> with the `popover` attribute (set by
- * tooltip.ts). Each one carries an inline `position-anchor: --tooltip-N`
- * matched by an inline `anchor-name: --tooltip-N` on its trigger. */
+ * Showing tooltips live under <body> with the `popover` attribute. The first
+ * time a tooltip shows, tooltip.ts stamps it with that attribute and an inline
+ * `position-anchor: --tooltip-N`, matched by an inline
+ * `anchor-name: --tooltip-N` on its trigger. */
 
 /* .miser is specific to click-invoked elements. */
 .miser {
