@@ -566,16 +566,21 @@
     - "Copt Mus"
   postfixes:
     ostr: "ostracon"
+    Catal 1: !lookup
+    Guide 1: !lookup
     tablet:
-    Catal 1: "M. Simaika, [Dalīl al-Matḥaf al-Qibṭī, vol. 1](https://coptic-treasures.com/book/%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D9%81-%D8%A7%D9%84%D9%82%D8%A8%D8%B7%D9%8A-%D9%88-%D8%A3%D9%87%D9%85-%D8%A7%D9%84%D9%83%D9%86%D8%A7%D8%A6%D8%B3-%D9%88-%D8%A7%D9%84%D8%A3%D8%AF/),
-      1930"
-    Guide 1: "M. Simaika, [Dalīl al-Matḥaf al-Qibṭī, vol. 1](https://coptic-treasures.com/book/%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D9%81-%D8%A7%D9%84%D9%82%D8%A8%D8%B7%D9%8A-%D9%88-%D8%A3%D9%87%D9%85-%D8%A7%D9%84%D9%83%D9%86%D8%A7%D8%A6%D8%B3-%D9%88-%D8%A7%D9%84%D8%A3%D8%AF/),
-      1930"
   prefixes:
     Lect: !lookup
     tablet:
     P: !lookup
     MS: !lookup
+
+- title: "M. Simaika, [Dalīl al-Matḥaf al-Qibṭī, vol. 1](https://coptic-treasures.com/book/%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D9%81-%D8%A7%D9%84%D9%82%D8%A8%D8%B7%D9%8A-%D9%88-%D8%A3%D9%87%D9%85-%D8%A7%D9%84%D9%83%D9%86%D8%A7%D8%A6%D8%B3-%D9%88-%D8%A7%D9%84%D8%A3%D8%AF/),
+    1930"
+  description:
+  variants:
+    - "Catal 1"
+    - "Guide 1"
 
 - title: "*Canons of Athanasius* ed. Riedel & Crum (Text & Transl. Soc.), 1904"
   description:
