@@ -1,4 +1,5 @@
-export const LOOKUP = Symbol('LOOKUP');
+export const REFERENCE = Symbol('REFERENCE');
+export const ANNOTATION = Symbol('ANNOTATION');
 export const DATA = [
   {
     "title": "E. Amélineau, <span class=\"title\">Œuvres de Schenoudi</span>, 1907 ff",
@@ -288,9 +289,9 @@ export const DATA = [
     "postfixes": {
       "Or": "Oriental",
       "or": "oriental",
-      "Add": "Addenda",
-      "Ad": "Addenda",
-      "ostr": "ostracon"
+      "Add": ANNOTATION,
+      "Ad": ANNOTATION,
+      "ostr": ANNOTATION
     }
   },
   {
@@ -330,7 +331,7 @@ export const DATA = [
       "Bod"
     ],
     "postfixes": {
-      "Copt": "Coptic",
+      "Copt": ANNOTATION,
       "copt": "Coptic",
       "(P)": null,
       "(P) a": null,
@@ -351,7 +352,7 @@ export const DATA = [
       "Bor"
     ],
     "postfixes": {
-      "Vita Sin": LOOKUP
+      "Vita Sin": REFERENCE
     }
   },
   {
@@ -409,7 +410,7 @@ export const DATA = [
       "Cairo"
     ],
     "prefixes": {
-      "Ostr": LOOKUP
+      "Ostr": ANNOTATION
     }
   },
   {
@@ -421,16 +422,16 @@ export const DATA = [
       "Copt Mus"
     ],
     "postfixes": {
-      "ostr": "ostracon",
-      "Catal 1": LOOKUP,
-      "Guide 1": LOOKUP,
+      "ostr": ANNOTATION,
+      "Catal 1": REFERENCE,
+      "Guide 1": REFERENCE,
       "tablet": null
     },
     "prefixes": {
-      "Lect": LOOKUP,
+      "Lect": ANNOTATION,
       "tablet": null,
-      "P": LOOKUP,
-      "MS": LOOKUP
+      "P": ANNOTATION,
+      "MS": ANNOTATION
     }
   },
   {
@@ -609,7 +610,7 @@ export const DATA = [
       "EES"
     ],
     "prefixes": {
-      "ostr": LOOKUP
+      "ostr": ANNOTATION
     }
   },
   {
@@ -639,8 +640,8 @@ export const DATA = [
       "Ep"
     ],
     "postfixes": {
-      "App": "Appendix",
-      "Append": "Appendix"
+      "App": ANNOTATION,
+      "Append": ANNOTATION
     }
   },
   {
@@ -846,7 +847,7 @@ export const DATA = [
       "Gosp of Jo": null
     },
     "prefixes": {
-      "Pap": LOOKUP
+      "Pap": ANNOTATION
     }
   },
   {
@@ -897,7 +898,7 @@ export const DATA = [
     ],
     "postfixes": {
       "Leip": "two such papyri in Leipzig University, Aegyptologisches Institut (cf below)",
-      "MMA": LOOKUP,
+      "MMA": REFERENCE,
       "Index": null
     }
   },
@@ -1262,7 +1263,7 @@ export const DATA = [
       "H": null,
       "K": null,
       "P": null,
-      "Berl Sitz": LOOKUP
+      "Berl Sitz": REFERENCE
     }
   },
   {
@@ -1498,10 +1499,10 @@ export const DATA = [
       "P"
     ],
     "postfixes": {
-      "ar": "Arabic"
+      "ar": ANNOTATION
     },
     "prefixes": {
-      "Lect": LOOKUP
+      "Lect": ANNOTATION
     }
   },
   {
@@ -1948,48 +1949,48 @@ export const DATA = [
       "(Besa)"
     ],
     "postfixes": {
-      "A": LOOKUP,
-      "AZ": LOOKUP,
-      "BM": LOOKUP,
-      "BM Or": LOOKUP,
-      "Berl Or": LOOKUP,
-      "Berl Sitz": LOOKUP,
-      "BIF": LOOKUP,
-      "BKU": LOOKUP,
-      "Bor": LOOKUP,
-      "C": LOOKUP,
-      "Cai Copt Mus": LOOKUP,
-      "Cai Copt Mus Catal 1": LOOKUP,
-      "Cambr Univ Libr Add": LOOKUP,
-      "Cambr Univ Add": LOOKUP,
-      "Columb Univ": LOOKUP,
-      "C O": LOOKUP,
-      "Cai": LOOKUP,
-      "Cl Pr": LOOKUP,
-      "Ep": LOOKUP,
-      "HT": LOOKUP,
-      "IF": LOOKUP,
-      "Louvre": LOOKUP,
-      "Leyd": LOOKUP,
-      "L Mis": LOOKUP,
-      "MIE": LOOKUP,
-      "MIF": LOOKUP,
-      "Mich": LOOKUP,
-      "Mich 550": LOOKUP,
-      "Ming": LOOKUP,
-      "Miss": LOOKUP,
-      "Mus": LOOKUP,
-      "Mun": LOOKUP,
-      "P": LOOKUP,
-      "P Stras": LOOKUP,
-      "P Col": LOOKUP,
-      "R": LOOKUP,
-      "RE": LOOKUP,
-      "Rec": LOOKUP,
-      "Ryl": LOOKUP,
-      "Vi K": LOOKUP,
-      "Wess": LOOKUP,
-      "Z": LOOKUP,
+      "A": REFERENCE,
+      "AZ": REFERENCE,
+      "BM": REFERENCE,
+      "BM Or": REFERENCE,
+      "Berl Or": REFERENCE,
+      "Berl Sitz": REFERENCE,
+      "BIF": REFERENCE,
+      "BKU": REFERENCE,
+      "Bor": REFERENCE,
+      "C": REFERENCE,
+      "Cai Copt Mus": REFERENCE,
+      "Cai Copt Mus Catal 1": REFERENCE,
+      "Cambr Univ Libr Add": REFERENCE,
+      "Cambr Univ Add": REFERENCE,
+      "Columb Univ": REFERENCE,
+      "C O": REFERENCE,
+      "Cai": REFERENCE,
+      "Cl Pr": REFERENCE,
+      "Ep": REFERENCE,
+      "HT": REFERENCE,
+      "IF": REFERENCE,
+      "Louvre": REFERENCE,
+      "Leyd": REFERENCE,
+      "L Mis": REFERENCE,
+      "MIE": REFERENCE,
+      "MIF": REFERENCE,
+      "Mich": REFERENCE,
+      "Mich 550": REFERENCE,
+      "Ming": REFERENCE,
+      "Miss": REFERENCE,
+      "Mus": REFERENCE,
+      "Mun": REFERENCE,
+      "P": REFERENCE,
+      "P Stras": REFERENCE,
+      "P Col": REFERENCE,
+      "R": REFERENCE,
+      "RE": REFERENCE,
+      "Rec": REFERENCE,
+      "Ryl": REFERENCE,
+      "Vi K": REFERENCE,
+      "Wess": REFERENCE,
+      "Z": REFERENCE,
       "hom ed Burmester": null
     }
   },
@@ -2234,7 +2235,7 @@ export const DATA = [
       "Turin"
     ],
     "prefixes": {
-      "P": LOOKUP
+      "P": ANNOTATION
     }
   },
   {
@@ -2421,7 +2422,7 @@ export const DATA = [
       "Aberdeen Univ"
     ],
     "prefixes": {
-      "P": LOOKUP
+      "P": ANNOTATION
     }
   },
   {
@@ -2885,7 +2886,7 @@ export const DATA = [
     ],
     "postfixes": {
       "Beiträge": null,
-      "P Schott-Reinh": LOOKUP
+      "P Schott-Reinh": REFERENCE
     }
   },
   {
@@ -3426,7 +3427,7 @@ export const DATA = [
       "Jéquier"
     ],
     "prefixes": {
-      "Ostr": LOOKUP
+      "Ostr": ANNOTATION
     }
   },
   {
@@ -3481,7 +3482,7 @@ export const DATA = [
       "R G Gayer-Anderson"
     ],
     "prefixes": {
-      "Pap": LOOKUP
+      "Pap": ANNOTATION
     }
   },
   {
@@ -3513,7 +3514,7 @@ export const DATA = [
       "Golenischeff"
     ],
     "prefixes": {
-      "MS": LOOKUP
+      "MS": ANNOTATION
     }
   },
   {
@@ -3531,9 +3532,9 @@ export const DATA = [
       "Götting"
     ],
     "postfixes": {
-      "Ar": "Arabic",
-      "ar": "Arabic",
-      "Copt": "Coptic"
+      "Ar": ANNOTATION,
+      "ar": ANNOTATION,
+      "Copt": ANNOTATION
     }
   },
   {
@@ -3775,7 +3776,7 @@ export const DATA = [
       "Inst franç Epiph De Gemm"
     ],
     "prefixes": {
-      "MS": LOOKUP
+      "MS": ANNOTATION
     }
   },
   {
@@ -3809,7 +3810,7 @@ export const DATA = [
       "J G Wilkinson"
     ],
     "postfixes": {
-      "Bodl": LOOKUP
+      "Bodl": REFERENCE
     }
   },
   {
@@ -4088,8 +4089,8 @@ export const DATA = [
       "C": null
     },
     "prefixes": {
-      "P": LOOKUP,
-      "MS": LOOKUP
+      "P": ANNOTATION,
+      "MS": ANNOTATION
     }
   },
   {
@@ -4102,11 +4103,11 @@ export const DATA = [
       "R": null,
       "E": null,
       "SN": null,
-      "ostr": null
+      "ostr": ANNOTATION
     },
     "prefixes": {
-      "Ostr": LOOKUP,
-      "ostr": LOOKUP
+      "Ostr": ANNOTATION,
+      "ostr": ANNOTATION
     }
   },
   {
@@ -5104,8 +5105,8 @@ export const DATA = [
       "Univ College London"
     ],
     "prefixes": {
-      "ostr": LOOKUP,
-      "Ostr": LOOKUP
+      "ostr": ANNOTATION,
+      "Ostr": ANNOTATION
     }
   },
   {
