@@ -88,23 +88,28 @@ export class Reference {
    *
    * @param source - Cited source.
    * @param variant - Abbreviation used to cite this source.
-   * @param fix - Either a postfix or a prefix. Optional.
+   * @param prefix - Optional.
+   * @param postfix - Optional.
    */
   public constructor(
     // TODO: (#522) The `source` field should become required once all sources
     // are populated.
     public readonly source: Source | undefined,
     public readonly variant: string,
-    public readonly fix?: Fix
+    public readonly prefix?: Prefix,
+    public readonly postfix?: Postfix
   ) {}
 
   /**
-   * @returns This reference's key in the `MAPPING` — the variant with its fix
-   * composed in, if it has one. `span` records it, and `fromSpan` looks the
-   * reference back up by it, so the round trip holds by construction.
+   * @returns This reference's key in the `MAPPING` — the variant with its
+   * prefix and postfix composed in, if it has them. `span` records it, and
+   * `fromSpan` looks the reference back up by it, so the round trip holds by
+   * construction.
    */
   public key(): string {
-    return this.fix?.compose(this.variant) ?? this.variant;
+    return [this.prefix?.name, this.variant, this.postfix?.name]
+      .filter((part: string | undefined): boolean => part !== undefined)
+      .join(' ');
   }
 
   /**
@@ -118,7 +123,8 @@ export class Reference {
     return [
       tooltip(this.variant, this.source.title()),
       ...this.source.description(),
-      ...(this.fix?.tooltip() ?? []),
+      ...(this.prefix?.tooltip() ?? []),
+      ...(this.postfix?.tooltip() ?? []),
     ];
   }
 
@@ -282,8 +288,6 @@ abstract class Fix {
     public readonly interpretation: sax.Fix
   ) {}
 
-  public abstract compose(variant: string): string;
-
   protected abstract lookup(): HTMLElement[];
 
   /**
@@ -336,15 +340,6 @@ abstract class Fix {
 class Postfix extends Fix {
   /**
    *
-   * @param variant
-   * @returns
-   */
-  public override compose(variant: string): string {
-    return `${variant} ${this.name}`;
-  }
-
-  /**
-   *
    * @returns
    */
   protected override lookup(): HTMLElement[] {
@@ -356,15 +351,6 @@ class Postfix extends Fix {
  *
  */
 class Prefix extends Fix {
-  /**
-   *
-   * @param variant
-   * @returns
-   */
-  public override compose(variant: string): string {
-    return `${this.name} ${variant}`;
-  }
-
   /**
    *
    * @returns
@@ -419,21 +405,29 @@ sax.DATA.forEach((raw: sax.Source): void => {
       ? new Source(raw.title, raw.description)
       : undefined;
 
-  raw.variants.forEach((variant: string): void => {
-    // Add the abbreviation without any fixes.
-    add(variant, new Reference(source, variant));
-    for (const [fixes, fixClass] of [
-      [raw.postfixes, Postfix],
-      [raw.prefixes, Prefix],
-    ] as const) {
-      Object.entries(fixes ?? {}).forEach(
-        ([name, type]: [string, sax.Fix]): void => {
-          const fix = new fixClass(name, type);
-          add(fix.compose(variant), new Reference(source, variant, fix));
-        }
-      );
+  // A citation bears at most one prefix and at most one postfix, either, or
+  // both. `undefined` stands for the absence of one.
+  const prefixes: (Prefix | undefined)[] = [
+    undefined,
+    ...Object.entries(raw.prefixes ?? {}).map(
+      ([name, type]: [string, sax.Fix]): Prefix => new Prefix(name, type)
+    ),
+  ];
+  const postfixes: (Postfix | undefined)[] = [
+    undefined,
+    ...Object.entries(raw.postfixes ?? {}).map(
+      ([name, type]: [string, sax.Fix]): Postfix => new Postfix(name, type)
+    ),
+  ];
+
+  for (const variant of raw.variants) {
+    for (const prefix of prefixes) {
+      for (const postfix of postfixes) {
+        const reference = new Reference(source, variant, prefix, postfix);
+        add(reference.key(), reference);
+      }
     }
-  });
+  }
 });
 
 /**

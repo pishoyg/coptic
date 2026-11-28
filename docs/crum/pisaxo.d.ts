@@ -64,8 +64,8 @@ export interface Source {
    * prefix 'ostr' of 'ostr Univ Coll London' looks up the annotation 'Ostr'
    * ('ostracon').
    *
-   * Prefixes don't combine with postfixes. A source that records both yields
-   * prefixed variants and postfixed variants, but never both at once.
+   * A citation can bear one prefix and one postfix at once, as in
+   * 'OstrLouvre SN'.
    */
   readonly prefixes?: Record<string, Fix> | null;
 }
