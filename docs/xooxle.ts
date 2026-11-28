@@ -1517,7 +1517,51 @@ export interface XooxleRaw {
      * other fields from the layer, in the order given in this field.
      */
     readonly layers: string[][];
+    /**
+     * hash is a hash of the index content. It's also stored in a file next to
+     * the index. See `fetchIndex`.
+     */
+    readonly hash: string;
   };
+}
+
+/**
+ * HASH_SUFFIX is appended to an index URL to get the URL of the file holding
+ * the index's hash. This must match the suffix used by the index builder in
+ * `xooxle/xooxle.py`.
+ */
+const HASH_SUFFIX = '.hash';
+
+/**
+ * Fetch a Xooxle index, letting the browser cache it until its content
+ * changes.
+ *
+ * GitHub Pages serves every file with `Cache-Control: max-age=600`, and an
+ * ETag derived from the deployment time. So once the 10 minutes are up, every
+ * deployment would force a full re-download of every index, even if the index
+ * hasn't changed.
+ * Instead, we read the index's content hash from a small file next to it
+ * (which goes through the usual revalidation), and request the index at a URL
+ * carrying that hash in `force-cache` mode, which reuses any cached response
+ * without revalidating it.
+ *
+ * @param url - The index URL.
+ * @returns The parsed index.
+ */
+export async function fetchIndex(url: string): Promise<XooxleRaw> {
+  const res: Response = await fetch(url + HASH_SUFFIX);
+  const hash: string = (await res.text()).trim();
+  const hashed = `${url}?${new URLSearchParams({ hash }).toString()}`;
+  const cached: Response = await fetch(hashed, { cache: 'force-cache' });
+  const index = (await cached.json()) as XooxleRaw;
+  if (index.metadata.hash === hash) {
+    return index;
+  }
+  // GitHub's CDN ignores the query string, so shortly after a deployment it
+  // may serve the previous index under the new hash. Overwrite the cached copy
+  // rather than pinning the stale one.
+  const fresh: Response = await fetch(hashed, { cache: 'reload' });
+  return (await fresh.json()) as XooxleRaw;
 }
 
 /**
