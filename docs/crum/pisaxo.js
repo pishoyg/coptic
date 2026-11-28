@@ -422,9 +422,9 @@ export const DATA = [
     ],
     "postfixes": {
       "ostr": "ostracon",
-      "tablet": null,
-      "Catal 1": "M. Simaika, <a href=\"https://coptic-treasures.com/book/%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D9%81-%D8%A7%D9%84%D9%82%D8%A8%D8%B7%D9%8A-%D9%88-%D8%A3%D9%87%D9%85-%D8%A7%D9%84%D9%83%D9%86%D8%A7%D8%A6%D8%B3-%D9%88-%D8%A7%D9%84%D8%A3%D8%AF/\">Dalīl al-Matḥaf al-Qibṭī, vol. 1</a>, 1930",
-      "Guide 1": "M. Simaika, <a href=\"https://coptic-treasures.com/book/%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D9%81-%D8%A7%D9%84%D9%82%D8%A8%D8%B7%D9%8A-%D9%88-%D8%A3%D9%87%D9%85-%D8%A7%D9%84%D9%83%D9%86%D8%A7%D8%A6%D8%B3-%D9%88-%D8%A7%D9%84%D8%A3%D8%AF/\">Dalīl al-Matḥaf al-Qibṭī, vol. 1</a>, 1930"
+      "Catal 1": LOOKUP,
+      "Guide 1": LOOKUP,
+      "tablet": null
     },
     "prefixes": {
       "Lect": LOOKUP,
@@ -432,6 +432,14 @@ export const DATA = [
       "P": LOOKUP,
       "MS": LOOKUP
     }
+  },
+  {
+    "title": "M. Simaika, <a href=\"https://coptic-treasures.com/book/%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D9%81-%D8%A7%D9%84%D9%82%D8%A8%D8%B7%D9%8A-%D9%88-%D8%A3%D9%87%D9%85-%D8%A7%D9%84%D9%83%D9%86%D8%A7%D8%A6%D8%B3-%D9%88-%D8%A7%D9%84%D8%A3%D8%AF/\">Dalīl al-Matḥaf al-Qibṭī, vol. 1</a>, 1930",
+    "description": null,
+    "variants": [
+      "Catal 1",
+      "Guide 1"
+    ]
   },
   {
     "title": "<span class=\"title\">Canons of Athanasius</span> ed. Riedel &amp; Crum (Text &amp; Transl. Soc.), 1904",
