@@ -161,7 +161,7 @@ All file paths are centralized:
 [#ISSUE][COMPONENT/SUBCOMPONENT] DESCRIPTION
 ```
 
-Use `fix #ISSUE` to auto-close an issue. Components: `Crum`, `KELLIA`, `Andreas`, `Bible`, `Lexicon`, `Flashcards`, `Site`, `Morphology`, `Xooxle`, `platform`, `AI`, `Community`, `App`, `Keyboard`.
+Use `fix #ISSUE` to auto-close an issue. Drop the `[#ISSUE]` prefix when the change isn't worth a ticket (`[COMPONENT] DESCRIPTION`); `#0` is for TODOs only. Components: `Crum`, `KELLIA`, `Andreas`, `Bible`, `Lexicon`, `Flashcards`, `Site`, `Morphology`, `Xooxle`, `platform`, `AI`, `Community`, `App`, `Keyboard`.
 
 ### Pre-commit Hooks
 
