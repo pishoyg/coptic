@@ -425,14 +425,8 @@ abstract class AggregateResult implements Result {
     // The Boundary enum values are ordered in such a way that the boundary
     // type of an aggregated result is the minimum of the boundary types of all
     // results.
-    return AggregateResult.boundary(
-      ...this.results.map((r: Result) => r.boundary())
-    );
+    return strongest(...this.results.map((r: Result) => r.boundary()));
   }
-  /**
-   * boundary computes an aggregate boundary from a list of boundaries.
-   */
-  public static boundary = Math.min;
 
   /**
    * @returns Whether this result has a match.
@@ -779,7 +773,7 @@ export class SearchResult extends AggregateResult {
     const boundaries: Boundary[] = this.results.map(
       (r: FieldSearchResult): Boundary => r.boundary()
     );
-    const boundary: Boundary = AggregateResult.boundary(...boundaries);
+    const boundary: Boundary = strongest(...boundaries);
     return [
       this.layer,
       // Results are sorted based on the boundary type.
@@ -1119,12 +1113,15 @@ class UnitSearchResult extends AggregateResult {
 }
 
 /**
- * BoundaryType represents the boundary type of a match.
+ * Boundary represents how a match sits within its word, or that a result has
+ * no match at all.
  * NOTE: The enum values are sorted such that the more significant matches have
- * lower values, to aid in sorting by priority.
+ * lower values, to aid in sorting by priority. NONE must stay last, so a field
+ * without a match ranks below a field with any match. A Match itself is never
+ * NONE.
  * Full-word matches come first, followed by prefix matches, then suffix
  * matches, then mid-word matches.
- * If a user searches for "ⲟⲩⲱ", the the following results should show in this
+ * If a user searches for "ⲟⲩⲱ", the following results should show in this
  * order:
  * - ⲟⲩⲱ
  * - ⲟⲩⲱⲓⲛⲓ
@@ -1140,6 +1137,16 @@ enum Boundary {
   SUFFIX,
   // The search query falls within a word.
   MID_WORD,
+  // There is no match.
+  NONE,
+}
+
+/**
+ * @param boundaries
+ * @returns The most significant boundary, or NONE if there are none.
+ */
+function strongest(...boundaries: Boundary[]): Boundary {
+  return boundaries.reduce((a, b) => (b < a ? b : a), Boundary.NONE);
 }
 
 /**
@@ -1481,7 +1488,7 @@ class LineSearchResult implements Result {
    * @returns The boundary type.
    */
   public boundary(): Boundary {
-    return AggregateResult.boundary(...this.matches.map((m) => m.boundary));
+    return strongest(...this.matches.map((m) => m.boundary));
   }
 }
 
