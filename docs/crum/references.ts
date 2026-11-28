@@ -96,8 +96,8 @@ export class Reference {
     // are populated.
     public readonly source: Source | undefined,
     public readonly variant: string,
-    public readonly prefix?: Prefix,
-    public readonly postfix?: Postfix
+    public readonly prefix?: Fix,
+    public readonly postfix?: Fix
   ) {}
 
   /**
@@ -275,9 +275,11 @@ function tooltip(
 }
 
 /**
- *
+ * A fix is a prefix or a postfix. It is part of the source designation, NOT a
+ * suffix. `Mani 1` and `Mani 2` are two whole citations naming two distinct
+ * sources — not the reference `Mani` followed by a page number.
  */
-abstract class Fix {
+class Fix {
   /**
    *
    * @param name
@@ -287,8 +289,6 @@ abstract class Fix {
     public readonly name: string,
     public readonly interpretation: sax.Fix
   ) {}
-
-  protected abstract lookup(): HTMLElement[];
 
   /**
    * NOTE: A fix whose interpretation is null in `bib.yaml` contributes
@@ -311,9 +311,9 @@ abstract class Fix {
    * `bib.yaml` for the COMBINED key before concluding otherwise: the postfix
    * that appears to have gone missing is usually declared and merely silent.
    *
-   * Note also that `Postfix.lookup` renders the postfix source's own standard
-   * variant rather than the form Crum actually wrote, which compounds the
-   * illusion.
+   * Note also that a `REFERENCE` fix renders the looked-up source's own
+   * standard variant rather than the form Crum actually wrote, which
+   * compounds the illusion.
    *
    * @returns
    */
@@ -321,43 +321,14 @@ abstract class Fix {
     if (!this.interpretation) {
       return [];
     }
-    if (typeof this.interpretation === 'string') {
-      return [tooltip(this.name, html.parse(this.interpretation))];
+    if (this.interpretation === sax.REFERENCE) {
+      return MAPPING[this.name]!.tooltip();
     }
-    dev.play(() => {
-      // Sanity check!
-      log.ensure(this.interpretation === sax.LOOKUP);
-    });
-    return this.lookup();
-  }
-}
-
-/**
- * A postfix is part of the source designation, NOT a suffix. `Mani 1` and
- * `Mani 2` are two whole citations naming two distinct sources — not the
- * reference `Mani` followed by a page number.
- */
-class Postfix extends Fix {
-  /**
-   *
-   * @returns
-   */
-  protected override lookup(): HTMLElement[] {
-    return MAPPING[this.name]!.tooltip();
-  }
-}
-
-/**
- *
- */
-class Prefix extends Fix {
-  /**
-   *
-   * @returns
-   */
-  protected override lookup(): HTMLElement[] {
-    const annot: ann.Annotation = ann.MAPPING[this.name]!;
-    return [tooltip(this.name, [annot.fixFullForm ?? annot.fullForm])];
+    if (this.interpretation === sax.ANNOTATION) {
+      const annot: ann.Annotation = ann.MAPPING[this.name]!;
+      return [tooltip(this.name, [annot.fixFullForm ?? annot.fullForm])];
+    }
+    return [tooltip(this.name, html.parse(this.interpretation))];
   }
 }
 
@@ -398,6 +369,18 @@ function add(key: string, reference: Reference): void {
   }
 }
 
+/**
+ *
+ * @param record
+ * @returns
+ */
+function fixes(record: Record<string, sax.Fix> | undefined | null): Fix[] {
+  return Object.entries(record ?? {}).map(
+    ([name, interpretation]: [string, sax.Fix]): Fix =>
+      new Fix(name, interpretation)
+  );
+}
+
 // Add all the variants to the map.
 sax.DATA.forEach((raw: sax.Source): void => {
   const source: Source | undefined =
@@ -407,18 +390,8 @@ sax.DATA.forEach((raw: sax.Source): void => {
 
   // A citation bears at most one prefix and at most one postfix, either, or
   // both. `undefined` stands for the absence of one.
-  const prefixes: (Prefix | undefined)[] = [
-    undefined,
-    ...Object.entries(raw.prefixes ?? {}).map(
-      ([name, type]: [string, sax.Fix]): Prefix => new Prefix(name, type)
-    ),
-  ];
-  const postfixes: (Postfix | undefined)[] = [
-    undefined,
-    ...Object.entries(raw.postfixes ?? {}).map(
-      ([name, type]: [string, sax.Fix]): Postfix => new Postfix(name, type)
-    ),
-  ];
+  const prefixes: (Fix | undefined)[] = [undefined, ...fixes(raw.prefixes)];
+  const postfixes: (Fix | undefined)[] = [undefined, ...fixes(raw.postfixes)];
 
   for (const variant of raw.variants) {
     for (const prefix of prefixes) {
@@ -430,28 +403,14 @@ sax.DATA.forEach((raw: sax.Source): void => {
   }
 });
 
-/**
- *
- * @param fixes
- * @param mapping
- */
-function verifyFixLookups(
-  fixes: Record<string, sax.Fix> | undefined | null,
-  mapping: Record<string, unknown>
-): void {
-  if (!fixes) {
-    return;
-  }
-  for (const [key, interpretation] of Object.entries(fixes)) {
-    if (interpretation === sax.LOOKUP) {
-      log.ensure(key in mapping, 'LOOKUP fix', key, 'is absent from the map!');
-    }
-  }
-}
-
 dev.play(() => {
   sax.DATA.forEach((source: sax.Source): void => {
-    verifyFixLookups(source.postfixes, MAPPING);
-    verifyFixLookups(source.prefixes, ann.MAPPING);
+    for (const fix of [...fixes(source.prefixes), ...fixes(source.postfixes)]) {
+      if (fix.interpretation === sax.REFERENCE) {
+        log.ensure(fix.name in MAPPING, 'Unknown reference:', fix.name);
+      } else if (fix.interpretation === sax.ANNOTATION) {
+        log.ensure(fix.name in ann.MAPPING, 'Unknown annotation:', fix.name);
+      }
+    }
   });
 });

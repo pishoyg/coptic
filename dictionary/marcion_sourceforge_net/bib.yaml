@@ -1,12 +1,66 @@
 ---
+# THE BIBLIOGRAPHY OF CRUM'S DICTIONARY
+#
 # This file is largely based on ⲡⲓⲥⲁϧⲟ's bibliography:
 #   https://www.coptist.com/2025/07/30/digitised-bibliography-crum/
+#
+# Each entry below is a SOURCE that Crum cites: a book, an edition, a
+# periodical, a collection of manuscripts, etc. On our website, hovering over
+# a citation in Crum's text shows a tooltip with what this file says about the
+# cited source.
+#
+# The file has two sections:
+# - Section 1 lists the sources in Crum's own List of Abbreviations, in Crum's
+#   order.
+# - Section 2 lists the sources that Crum cites in the text, but that are
+#   missing from his list, in alphabetical order. Most of them are still
+#   empty, waiting to be filled out.
+#
+# Comments start with `#`. They are for the people who edit this file, and
+# never appear on the website. `TODO` marks unfinished work, and `NOTE` explains
+# a decision. A following `(#N)` is issue N on GitHub:
+#   https://github.com/pishoyg/coptic/issues/N
+# Completing this file is tracked by #522:
+#   https://github.com/pishoyg/coptic/issues/522
 
-# NOTE: Where there is inconsistency in spacing, the stored abbreviated form
-# should contain spaces. Our algorithm should then be capable of processing
-# space variants.
-# For example, storing 'Cai Copt Mus' as a variant results in our algorithm
-# generating the following variants for the entry:
+# 1. THE PARTS OF AN ENTRY
+#
+#   - title: "E. Amélineau, *Œuvres de Schenoudi*, 1907 ff"
+#     description:
+#       - "Amélineau, E. (1907). *[Œuvres de Schenoudi …](https://…)*.
+#         Tome 1. Paris: E. Leroux."
+#     variants:
+#       - "A"
+#     postfixes:
+#       …
+#     prefixes:
+#       …
+#
+# - `title`: The name of the source, shown in the first line of the tooltip,
+#   after the abbreviation (as in "A: E. Amélineau, Œuvres de Schenoudi …").
+#   In Section 1, this is Crum's own wording.
+# - `description`: A list of lines, shown as a bulleted list under the title.
+#   This is typically a full bibliographic reference, with a link to a scan
+#   where one is available. It may also contain notes for the reader, such as
+#   where a manuscript is kept today.
+# - `variants`: The abbreviations that Crum uses to cite the source (see
+#   below).
+# - `postfixes` and `prefixes` (optional): See below.
+#
+# `title`, `description`, and `variants` are required. `title` and
+# `description` may be left empty, but `variants` must have at least one item.
+# An entry with neither a title nor a description gets no tooltip at all.
+
+# 2. VARIANTS
+#
+# A citation in Crum's text is recognized as a citation of an entry only if it
+# matches one of the entry's variants EXACTLY, including capitalization. If
+# Crum cites a source inconsistently, list every form he uses.
+#
+# The only exception is spacing. Where Crum is inconsistent in spacing, store
+# the form WITH spaces, and the other spacings are generated automatically.
+# For example, storing 'Cai Copt Mus' as a variant results in the following
+# variants for the entry:
 # - 'Cai Copt Mus'
 # - 'CaiCopt Mus'
 # - 'Cai CoptMus'
@@ -14,17 +68,77 @@
 # Storing both 'Cai Copt Mus' and 'CaiCoptMus' would be considered an error,
 # because the former implicitly includes the latter, and redundancy is
 # forbidden.
+#
+# Every abbreviation must belong to ONE entry only. The same variant (or the
+# same variant with the same prefix or postfix) may not appear in two entries.
+#
+# Variants also compete with the other abbreviations that we recognize in
+# Crum's text, such as the books of the Bible, and the annotations (see
+# below). Where the same text could be read as more than one of them, the
+# LONGEST abbreviation that fits wins. So a variant that is too short or too
+# common can steal citations that belong to something else. If you suspect a
+# conflict, leave a NOTE explaining it, and we will sort it out.
 
-# NOTE: Notice the following regarding the structure of the file:
+# 3. POSTFIXES AND PREFIXES
+#
+# A postfix is a part of the abbreviation that follows the variant and makes
+# it more specific, often by naming a place, a department, or a part of the
+# work. A prefix is the same, but it precedes the variant. For example, the
+# 'Or' of 'BM Or' (British Museum, Oriental) is a postfix, and the 'P' of
+# 'P Cai Copt Mus' (papyrus) is a prefix.
+#
+# A citation can bear one prefix, one postfix, or one of each, as in
+# 'OstrLouvre SN'. Spacing works as it does for variants, so the postfix
+# 'Or' of 'BM' covers both 'BM Or' and 'BMOr'.
+#
+# Postfixes are NOT the numbers that locate a passage within a source (page,
+# column, line, etc.). Those are recognized automatically, and should not be
+# listed here. A number belongs here only if it names a distinct source, as
+# the '1' and '2' of 'Mani 1' and 'Mani 2' do.
+#
+# Each postfix or prefix is written as `key: value`, where the value says what
+# the tooltip shows for it. The value can be one of the following:
+#
+#     postfixes:
+#       Or: "Oriental"     # 1. Text, written like the title.
+#       K:                 # 2. Empty. The tooltip shows nothing for it.
+#       BM: !reference     # 3. The tooltip of the entry that 'BM' cites.
+#     prefixes:
+#       Ostr: !annotation  # 4. The meaning of the annotation 'Ostr'.
+#
+# 1. Text: Shown in the tooltip after the postfix, as in "Or: Oriental".
+# 2. Empty: Used when the postfix needs no explanation, or when its
+#    explanation lives in the entry's description (see the NOTE on
+#    consolidated postfixes below). Also used as a placeholder for
+#    explanations that are still missing.
+# 3. `!reference`: Used when the postfix or prefix is ITSELF an abbreviation
+#    of another source in this file. For example, Crum cites Shenoute's works
+#    by the edition or the collection that holds them, as in 'Sh BM'
+#    (Shenoute, in the British Museum manuscripts). `BM: !reference` makes the
+#    tooltip show the whole entry of 'BM', so we don't have to write it twice.
+#    The key must exactly match an abbreviation of another entry.
+# 4. `!annotation`: Used when the postfix or prefix is a general
+#    abbreviation, rather than a source, such as 'Ostr' (ostracon), 'P' or
+#    'Pap' (papyrus), 'MS' (manuscript), or 'Lect' (lectionary). Our website
+#    already knows the meanings of these, so we don't have to write them
+#    again. If you are unsure whether an abbreviation is known to us, write
+#    its meaning as text, and we will convert it.
+#
+# Neither `!reference` nor `!annotation` takes a value: write nothing after
+# it on the same line, except perhaps a comment.
+
+# 4. FORMATTING
+#
+# This file is written in YAML. For more information about YAML syntax, see
+# https://learnxinyminutes.com/yaml/ (a short introduction) or
+# https://yaml.org/spec/1.2.2/ (the full specification).
+#
 # 1. Use consistent indentation.
-# 2. The `title`, `description`, and `variants` fields are required for each
-#    entry. The first two can be left empty, but `variants` must have at least
-#    one item.
-# 3. `title` is a scalar. The data can follow on the same line.
-# 4. `description` is a list. The `description:` key must reside on its own line,
-#    and each item in the description must follow on a line starting with `- ` (a
-#    hyphen followed by a space).
-# 5. Use Markdown syntax, specifically:
+# 2. `title` is a single value. The data can follow on the same line.
+# 3. `description` is a list. The `description:` key must reside on its own
+#    line, and each item in the description must follow on a line starting
+#    with `- ` (a hyphen followed by a space).
+# 4. Use Markdown syntax, specifically:
 #
 #    - Single asterisks for work titles (typically italicized):
 #        *title*
@@ -54,21 +168,25 @@
 #    - The bracket notation for hyperlinks:
 #        [name](https://example.com/)
 #
-# 6. Double-quote all values.
-# 7. Don't double-quote any keys (such as `title`, `description`, etc., and
-#    postfix keys).
-# 8. If a description entry needs to contain a list nested within it, then do
+#    Each value must be a single paragraph, optionally followed by a nested
+#    list (see rule 7). Don't separate paragraphs with blank lines.
+# 5. Double-quote all values, except the `!reference` and `!annotation` tags.
+# 6. Don't double-quote any keys (such as `title`, `description`, etc., and
+#    postfix and prefix keys).
+# 7. If a description entry needs to contain a list nested within it, then do
 #    the following:
 #    - Write `description:` on a separate line.
-#    - Begin the entry with `- |-` (a hyphen and a space, followed by a vertical
-#      bar and a hyphen).
-#    - The description can follow afterwards, on the next indented lines, and it
-#      should NOT be surrounded by double quotes.
+#    - Begin the entry with `- |-` (a hyphen and a space, followed by a
+#      vertical bar and a hyphen).
+#    - The description can follow afterwards, on the next indented lines, and
+#      it should NOT be surrounded by double quotes.
 #    - Use Markdown notation for lists. Each item should be preceded by `- `.
-# For all of the above, see examples throughout the files.
+# For all of the above, see examples throughout the file.
+
+# 5. CONVENTIONS
 
 # NOTE: (#671) CONSOLIDATED POSTFIXES. Crum often repeats only the postfix of a
-# citation in the _ibidem_ that follows it ('ManiK …, ib K …'), and a bare
+# citation in the _ibidem_ that follows it ('ManiP …, ib K …'), and a bare
 # postfix is not a parsable key. Where an entry's postfixes merely name parts
 # of one work, we therefore CONSOLIDATE it: each postfix description moves into
 # the entry's own `description`, introduced by its own siglum (`**K**: …` as a
@@ -92,6 +210,34 @@
 # Such works tend to be cited less often. And the lower frequency and longer
 # abbreviations minimize the chances of collision.
 # These conventions are often broken. Use your judgement.
+
+# NOTE: (#668) Some of Crum's citations are too irregular to be recognized
+# automatically, so we label them by hand in `wiki.tsv`. A postfix commented
+# "Only in manual labels" exists only to serve such labels.
+
+# 6. FOR DEVELOPERS
+#
+# - `pisaxo.ts` (next to this file) validates this file against a Zod schema,
+#   converts its Markdown to HTML, and emits `docs/crum/pisaxo.js`, which the
+#   website consumes. Run it directly, or through `make crum` (which also runs
+#   the rest of the Crum pipeline). The schema has a TypeScript twin in
+#   `docs/crum/pisaxo.d.ts`; the two must be kept in sync.
+# - `!reference` and `!annotation` are custom YAML tags. `pisaxo.ts` emits them
+#   as the `REFERENCE` and `ANNOTATION` symbols. `docs/crum/references.ts`
+#   resolves a `REFERENCE` against its own reference mapping, and an
+#   `ANNOTATION` against the mapping in `docs/crum/annotations.ts`.
+# - All keys (variants, postfixes, and prefixes) must be NFD-normalized.
+#   `pisaxo.ts` enforces it.
+# - Duplicate keys, including those that the space variants and the
+#   prefix/postfix combinations generate, are caught in the browser when
+#   `references.ts` builds its mapping, as are `!reference` and `!annotation`
+#   keys that don't resolve (in dev mode only). After editing this file, run
+#   `pisaxo.ts`, `make wiki`, and the Playwright tests (`test/wiki.ts`,
+#   `test/tooltip.ts`). The dump that `make wiki` writes under
+#   `data/output/wiki/` shows which citations changed.
+# - The `format-pisaxo` pre-commit hook normalizes the blank lines in this
+#   file and drops `null` placeholders, and eslint (`yml/plain-scalar`)
+#   enforces the double quotes.
 
 ################################################################################
 ##### Section 1 lists the sources from Crum's list of abbreviations.
@@ -433,9 +579,9 @@
   postfixes:
     Or: "Oriental"
     or: "oriental"
-    Add: "Addenda"
-    Ad: "Addenda"
-    ostr: "ostracon"
+    Add: !annotation
+    Ad: !annotation
+    ostr: !annotation
 
 - title: "Budge, *Coptic Martyrdoms*, 1914"
   description:
@@ -468,7 +614,7 @@
     - "Bodl"
     - "Bod"
   postfixes:
-    Copt: "Coptic"
+    Copt: !annotation
     copt: "Coptic"
     (P):
     (P) a:
@@ -487,7 +633,7 @@
     - "Bor"
   postfixes:
     # NOTE: Only in manual labels (#668).
-    Vita Sin: !lookup
+    Vita Sin: !reference
 
 - title: "Papyri & ostraca in Staatsmuseum, Berlin"
   description:
@@ -556,7 +702,7 @@
     - "Cai"
     - "Cairo"
   prefixes:
-    Ostr: !lookup
+    Ostr: !annotation
 
 - title: "MSS. &c. in Coptic Museum, Cairo"
   description:
@@ -565,15 +711,15 @@
     - "Copt Mus Cai"
     - "Copt Mus"
   postfixes:
-    ostr: "ostracon"
-    Catal 1: !lookup
-    Guide 1: !lookup
+    ostr: !annotation
+    Catal 1: !reference
+    Guide 1: !reference
     tablet:
   prefixes:
-    Lect: !lookup
+    Lect: !annotation
     tablet:
-    P: !lookup
-    MS: !lookup
+    P: !annotation
+    MS: !annotation
 
 - title: "M. Simaika, [Dalīl al-Matḥaf al-Qibṭī, vol. 1](https://coptic-treasures.com/book/%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D9%81-%D8%A7%D9%84%D9%82%D8%A8%D8%B7%D9%8A-%D9%88-%D8%A3%D9%87%D9%85-%D8%A7%D9%84%D9%83%D9%86%D8%A7%D8%A6%D8%B3-%D9%88-%D8%A7%D9%84%D8%A3%D8%AF/),
     1930"
@@ -762,7 +908,7 @@
   variants:
     - "EES"
   prefixes:
-    ostr: !lookup
+    ostr: !annotation
 
 - title: "*Die Apokalypse d. Elias*, ed. G. Steindorff, 1899"
   description:
@@ -798,8 +944,8 @@
   variants:
     - "Ep"
   postfixes:
-    App: "Appendix"
-    Append: "Appendix"
+    App: !annotation
+    Append: !annotation
 
 - title: "Études… dédiées à C. Leemans, 1885"
   description:
@@ -1023,7 +1169,7 @@
     Copt Palimp:
     Gosp of Jo:
   prefixes:
-    Pap: !lookup
+    Pap: !annotation
 
 - title: "G. Horner, *Statutes of the Apostles*, 1904"
   # NOTE: This is listed twice as both 'Stat' and 'HSt'.
@@ -1077,7 +1223,7 @@
     # https://www.metmuseum.org/art/collection/search/475050
     # It's also edited in `J Sch`:
     # https://archive.org/details/in.ernet.dli.2015.44575/page/n32/mode/1up
-    MMA: !lookup
+    MMA: !reference
     Index:
 
 - title: "*Journal Asiatique*, acc. to year, vol. & page"
@@ -1444,7 +1590,7 @@
     H:
     K:
     P:
-    Berl Sitz: !lookup
+    Berl Sitz: !reference
 
 - title: "Lightfoot, *Ignatius*¹, ii 1 865 ff"
   description:
@@ -1661,9 +1807,9 @@
   variants:
     - "P"
   postfixes:
-    ar: "Arabic"
+    ar: !annotation
   prefixes:
-    Lect: !lookup
+    Lect: !annotation
 
 - title: "Papyri in Museum at Alexandria, ed. de Ricci & Winstedt in *Sphinx* x, also
     Crum’s copies"
@@ -2109,48 +2255,48 @@
     - "Sh(Besa)"
     - "(Besa)"
   postfixes:
-    A: !lookup
-    AZ: !lookup
-    BM: !lookup
-    BM Or: !lookup
-    Berl Or: !lookup
-    Berl Sitz: !lookup
-    BIF: !lookup
-    BKU: !lookup
-    Bor: !lookup
-    C: !lookup
-    Cai Copt Mus: !lookup
-    Cai Copt Mus Catal 1: !lookup
-    Cambr Univ Libr Add: !lookup
-    Cambr Univ Add: !lookup
-    Columb Univ: !lookup
-    C O: !lookup
-    Cai: !lookup
-    Cl Pr: !lookup
-    Ep: !lookup
-    HT: !lookup
-    IF: !lookup
-    Louvre: !lookup
-    Leyd: !lookup
-    L Mis: !lookup
-    MIE: !lookup
-    MIF: !lookup
-    Mich: !lookup
-    Mich 550: !lookup
-    Ming: !lookup
-    Miss: !lookup
-    Mus: !lookup
-    Mun: !lookup
-    P: !lookup
-    P Stras: !lookup
-    P Col: !lookup
-    R: !lookup
-    RE: !lookup
-    Rec: !lookup
-    Ryl: !lookup
-    Vi K: !lookup
-    Wess: !lookup
-    Z: !lookup
+    A: !reference
+    AZ: !reference
+    BM: !reference
+    BM Or: !reference
+    Berl Or: !reference
+    Berl Sitz: !reference
+    BIF: !reference
+    BKU: !reference
+    Bor: !reference
+    C: !reference
+    Cai Copt Mus: !reference
+    Cai Copt Mus Catal 1: !reference
+    Cambr Univ Libr Add: !reference
+    Cambr Univ Add: !reference
+    Columb Univ: !reference
+    C O: !reference
+    Cai: !reference
+    Cl Pr: !reference
+    Ep: !reference
+    HT: !reference
+    IF: !reference
+    Louvre: !reference
+    Leyd: !reference
+    L Mis: !reference
+    MIE: !reference
+    MIF: !reference
+    Mich: !reference
+    Mich 550: !reference
+    Ming: !reference
+    Miss: !reference
+    Mus: !reference
+    Mun: !reference
+    P: !reference
+    P Stras: !reference
+    P Col: !reference
+    R: !reference
+    RE: !reference
+    Rec: !reference
+    Ryl: !reference
+    Vi K: !reference
+    Wess: !reference
+    Z: !reference
     # TODO: (#522) Populate.
     hom ed Burmester:
 
@@ -2401,7 +2547,7 @@
   variants:
     - "Turin"
   prefixes:
-    P: !lookup
+    P: !annotation
 
 - title: "ostraca in Museo Archeol., Turin (Crum’s copies)"
   description:
@@ -2565,7 +2711,7 @@
     - "Aberdeen Univ Libr"
     - "Aberdeen Univ"
   prefixes:
-    P: !lookup
+    P: !annotation
 
 - title:
   description:
@@ -2905,7 +3051,7 @@
     - "C H Becker"
   postfixes:
     Beiträge:
-    P Schott-Reinh: !lookup
+    P Schott-Reinh: !reference
 
 - title:
   description:
@@ -3310,7 +3456,7 @@
     - "G. Jéquier"
     - "Jéquier"
   prefixes:
-    Ostr: !lookup
+    Ostr: !annotation
 
 - title:
   description:
@@ -3351,7 +3497,7 @@
     - "R G Gayer Anderson"
     - "R G Gayer-Anderson"
   prefixes:
-    Pap: !lookup
+    Pap: !annotation
 
 - title:
   description:
@@ -3374,7 +3520,7 @@
     - "Golenischef"
     - "Golenischeff"
   prefixes:
-    MS: !lookup
+    MS: !annotation
 
 - title:
   description:
@@ -3387,9 +3533,9 @@
     - "Gött"
     - "Götting"
   postfixes:
-    Ar: "Arabic"
-    ar: "Arabic"
-    Copt: "Coptic"
+    Ar: !annotation
+    ar: !annotation
+    Copt: !annotation
 
 - title:
   description:
@@ -3573,7 +3719,7 @@
     - "IF Epiph De Gemm"
     - "Inst franç Epiph De Gemm"
   prefixes:
-    MS: !lookup
+    MS: !annotation
 
 - title:
   description:
@@ -3599,7 +3745,7 @@
     - "J G Wilkinson"
   postfixes:
     # NOTE: Only in manual labels (#668).
-    Bodl: !lookup
+    Bodl: !reference
 
 - title:
   description:
@@ -3811,8 +3957,8 @@
     Bibl Univ:
     C:
   prefixes:
-    P: !lookup
-    MS: !lookup
+    P: !annotation
+    MS: !annotation
 
 - title:
   description:
@@ -3822,10 +3968,10 @@
     R:
     E:
     SN:
-    ostr:
+    ostr: !annotation
   prefixes:
-    Ostr: !lookup
-    ostr: !lookup
+    Ostr: !annotation
+    ostr: !annotation
 
 - title:
   description:
@@ -3995,6 +4141,8 @@
   description:
   variants:
     # TODO: (#522) The variants below likely refer to different items.
+    # TODO: (#522) This should ideally be combined with the entry for `EES`
+    # (Egypt Exploration Society).
     - "MS Antinoe penes EES"
     - "P Antinoe EES"
     - "P Antinoe (penes EES)"
@@ -4581,8 +4729,8 @@
     - "Univ College Lond"
     - "Univ College London"
   prefixes:
-    ostr: !lookup
-    Ostr: !lookup
+    ostr: !annotation
+    Ostr: !annotation
 
 - title:
   description:

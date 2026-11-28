@@ -237,7 +237,7 @@ repos:
       - id: check-vcs-permalinks
       - id: check-yaml
         # `--unsafe` checks syntax without resolving tags, so files with
-        # custom tags like `!lookup` in bib.yaml still pass.
+        # custom tags like `!reference` in bib.yaml still pass.
         args: [--allow-multiple-documents, --unsafe]
       - id: check-toml
       - id: debug-statements

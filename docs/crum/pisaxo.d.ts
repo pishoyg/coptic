@@ -5,8 +5,18 @@
 // NOTE: In general, fields may be absent (`undefined`) or empty-placeholder
 // (`null`). This is why we account for both values below.
 
-export const LOOKUP: symbol;
-export type Fix = string | null | typeof LOOKUP;
+/** A fix whose interpretation is that of the reference it names. */
+export const REFERENCE: unique symbol;
+/** A fix whose interpretation is that of the annotation it names. */
+export const ANNOTATION: unique symbol;
+/**
+ * Fix is the interpretation of a prefix or a postfix: its own text, a null
+ * placeholder, or an interpretation borrowed from an annotation (`ANNOTATION`)
+ * or from another reference (`REFERENCE`). The prefix 'Ostr' of
+ * 'Ostr Univ Coll London' looks up the annotation 'Ostr' ('ostracon'), while
+ * the postfix 'BM' of 'Sh BM' looks up the reference 'BM'.
+ */
+export type Fix = string | null | typeof REFERENCE | typeof ANNOTATION;
 
 export const DATA: Source[];
 
@@ -50,6 +60,8 @@ export interface Source {
    * 'oriental') is more appropriately treated as a suffix rather than a
    * postfix, but we treat it as a postfix because it's written as 'BMOr' not
    * 'BM Or'.
+   *
+   * See `Fix` for how a postfix is interpreted.
    */
   readonly postfixes?: Record<string, Fix> | null;
   /** prefixes is a list of all prefixes that this abbreviation can bear.
@@ -59,10 +71,7 @@ export interface Source {
    *
    * Prefixes are far less common than postfixes.
    *
-   * A prefix resolves its `LOOKUP` interpretation against the annotation
-   * mapping, not the reference mapping — the opposite of a postfix. The
-   * prefix 'ostr' of 'ostr Univ Coll London' looks up the annotation 'Ostr'
-   * ('ostracon').
+   * See `Fix` for how a prefix is interpreted.
    *
    * A citation can bear one prefix and one postfix at once, as in
    * 'OstrLouvre SN'.

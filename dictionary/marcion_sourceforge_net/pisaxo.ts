@@ -8,8 +8,12 @@
  * front-end. YAML is more human-friendly.
  *
  * YAML convention:
- * - `!lookup` marks a postfix whose meaning is resolved by looking up another
- *   source. It is rendered as the bare `LOOKUP` constant in JavaScript.
+ * - `!reference` marks a prefix or postfix whose meaning is resolved by
+ *   looking up another reference. It is rendered as the bare `REFERENCE`
+ *   constant in JavaScript.
+ * - `!annotation` marks a prefix or postfix whose meaning is resolved by
+ *   looking up an annotation. It is rendered as the bare `ANNOTATION` constant
+ *   in JavaScript.
  *
  * Schema:
  * The bibliographic shape is described twice and the two definitions must be
@@ -39,17 +43,32 @@ const DIRNAME: string = dirname(fileURLToPath(import.meta.url));
 const YAML_PATH: string = path.join(DIRNAME, 'bib.yaml');
 const JS_PATH: string = path.join('docs', 'crum', 'pisaxo.js');
 
-// Sentinel guaranteed not to appear naturally in the bibliographic data.
-// The YAML loader maps the `!lookup` tag to this string; the JS emitter
-// rewrites it to the bare identifier `LOOKUP`, which the emitted module
-// defines as `Symbol('LOOKUP')`.
-// NOTE: Use a sentinel that doesn't confuse the Markdown-to-HTML converter. For
-// example, do not surround it it with Python-style double underscores.
-const MAGIC_LOOKUP = 'MAGIC_LOOKUP_SENTINEL';
+// Each valueless YAML tag names the symbol that the emitted module exports
+// for it. The YAML loader maps the tag to a sentinel string, guaranteed not to
+// appear naturally in the bibliographic data, and the JS emitter rewrites the
+// sentinel to the bare identifier of the symbol, which the emitted module
+// defines as `Symbol(…)`.
+const SYMBOLS = {
+  '!reference': 'REFERENCE',
+  '!annotation': 'ANNOTATION',
+} as const satisfies Record<string, string>;
 
-const FIXES = z
-  .record(z.string(), z.union([z.string(), z.null(), z.literal(MAGIC_LOOKUP)]))
-  .optional();
+type SymbolName = (typeof SYMBOLS)[keyof typeof SYMBOLS];
+
+/**
+ * @param symbol
+ * @returns The sentinel that stands for the given symbol until emission.
+ */
+function sentinel(symbol: SymbolName): string {
+  return `MAGIC_${symbol}_SENTINEL`;
+}
+
+const SENTINELS: Set<string> = new Set<string>(
+  Object.values(SYMBOLS).map(sentinel)
+);
+
+// A sentinel is a string, so it needs no member of its own.
+const FIXES = z.record(z.string(), z.string().nullable()).optional();
 
 // The schema below is the validation-time twin of the `Source` interface in
 // `docs/crum/pisaxo.d.ts`. Keep the two definitions in sync — see the
@@ -179,7 +198,8 @@ function ensureNormalized(sources: sax.Source[]): void {
  */
 function convertFixes(record: Record<string, sax.Fix>): void {
   for (const [key, value] of Object.entries(record)) {
-    if (typeof value !== 'string') {
+    // Sentinels are not Markdown.
+    if (typeof value !== 'string' || SENTINELS.has(value)) {
       continue;
     }
     record[key] = markdownToHTML(value);
@@ -216,20 +236,23 @@ function convert(data: Mutable<sax.Source>[]): void {
 function main(): void {
   // Load the data.
   const raw: string = fs.readFileSync(YAML_PATH, 'utf8');
-  log.ensure(
-    !raw.includes(MAGIC_LOOKUP),
-    'Sentinel found int input:',
-    MAGIC_LOOKUP
-  );
+  for (const magic of SENTINELS) {
+    log.ensure(!raw.includes(magic), 'Sentinel found in input:', magic);
+  }
   const object: unknown = yaml.load(raw, {
     schema: yaml.CORE_SCHEMA.withTags(
-      // `!lookup` is a valueless tag, so it resolves to the sentinel regardless
-      // of the (empty) scalar that carries it. `identify` always declines,
-      // because we only ever load this file, never dump it.
-      yaml.defineScalarTag('!lookup', {
-        resolve: () => MAGIC_LOOKUP,
-        identify: () => false,
-      })
+      // Our tags are valueless, so each resolves to its sentinel, and rejects
+      // any value it carries, which it would otherwise silently drop.
+      // `identify` always declines, because we only ever load this file, never
+      // dump it.
+      Object.entries(SYMBOLS).map(
+        ([tag, symbol]: [string, SymbolName]): yaml.TagDefinition =>
+          yaml.defineScalarTag(tag, {
+            resolve: (source: string) =>
+              source === '' ? sentinel(symbol) : yaml.NOT_RESOLVED,
+            identify: () => false,
+          })
+      )
     ),
   });
 
@@ -244,19 +267,21 @@ function main(): void {
   // Convert Markdown to HTML.
   convert(parsed.data as Mutable<sax.Source>[]);
 
-  // Restore the `LOOKUP` symbol.
-  const json: string = JSON.stringify(parsed.data, null, 2).replaceAll(
-    `"${MAGIC_LOOKUP}"`,
-    'LOOKUP'
-  );
+  // Restore the symbols.
+  let json: string = JSON.stringify(parsed.data, null, 2);
+  const symbols: SymbolName[] = Object.values(SYMBOLS);
+  for (const symbol of symbols) {
+    json = json.replaceAll(`"${sentinel(symbol)}"`, symbol);
+  }
 
   // Write the output.
-  fs.writeFileSync(
-    JS_PATH,
-    "export const LOOKUP = Symbol('LOOKUP');\n" +
-      `export const DATA = ${json};`,
-    'utf8'
-  );
+  const exports: string = symbols
+    .map(
+      (symbol: SymbolName): string =>
+        `export const ${symbol} = Symbol('${symbol}');`
+    )
+    .join('\n');
+  fs.writeFileSync(JS_PATH, `${exports}\nexport const DATA = ${json};`, 'utf8');
 }
 
 main();
